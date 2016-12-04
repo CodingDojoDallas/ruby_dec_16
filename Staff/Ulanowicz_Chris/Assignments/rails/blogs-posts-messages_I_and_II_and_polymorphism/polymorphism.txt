@@ -1,0 +1,23 @@
+1.  Start with the rails project from Blogs II and if not still up get running again in console, terminal and sublime
+2.  In terminal type rails g model Comment commentable_type:string commentable_id:integer user:references body:text
+3.  In sublime go to blogs/app/models/comment.rb
+4.	inside class type belongs_to :commendable, polymorphic: true
+5.  In sublime go to blogs/app/models/blog.rb
+6.	inside class type has_many :comments, as: :commentable
+7.  In sublime go to blogs/app/models/post.rb
+8.	inside class type has_many :comments, as: :commentable
+9.  In sublime go to blogs/app/models/message.rb
+10.	inside class type has_many :comments, as: :commentable
+11. In sublime go to blogs/app/models/user.rb
+12.	inside class add in ‘has_many :comments’
+13.	    on next line type has_many :comments, as: :commentable  (this may cause an error because of the previous line
+14. In terminal type rake db:migrate
+15. In rails console type reload! to apply changes (or better yet just exit out and restart)
+16. 	type Comment.create(user:User.first, body:"Poly yo", commentable: User.find(2))
+17.	or can also create by typing User.find(3).comments.create(body: "Morphism hell yeah!", user:User.first)
+18.	type Blog.last.comments.create(user:User.last, body:"sweetness")
+19.	type Post.first.comments.create(user:User.find(4), body:"slick")
+20.	type Message.find(6).comments.create(user:User.find(3), body:"commentin machine")
+21.	type Comment.all (to see all comments everywhere)
+22.	type Comment.update(2, user:User.find(3))
+23.	type Comment.last.destroy

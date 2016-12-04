@@ -1,0 +1,65 @@
+1.  Start with the rails project from Blogs I and if not still up get running again in console, terminal and sublime
+2.  In terminal type rails g model User first_name:string last_name:string email_address:string
+3.	type rails g model Owner user:references blog:references
+4.	type rails g migration AddUserRefToPosts user:references
+5.	type rails g migration AddUserRefToMessages user:references
+6.  In sublime go to blogs/app/models/user.rb
+7.  	inside class type has_many :owners
+8.	    on next line type has_many :blogs, through: :owners
+9.	    on next line type has_many :posts
+10.	    on next line type has_many :messages
+11.	    on next line type EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
+12.	    on next line type validates :first_name, :last_name, :email_address, presence: true
+13.	    on next line type validates :email_address, uniqueness: { case_sensitive: false }, format: { with: EMAIL_REGEX }
+14. In sublime go to blogs/app/models/blog.rb
+15.	add line inside class ‘has_many :owners’
+16.	on next line type has_many :users, through: :owners
+17. In sublime go to blogs/app/models/post.rb
+18.	add line inside class ‘belongs_to :user’
+19. In sublime go to blogs/app/models/message.rb
+20.	add line inside class ‘belongs_to :user’
+21. In terminal type rake db:migrate
+22. In Rails Console type reload! to apply recent changes
+23.	type User.create(first_name:”Chris”, last_name:”Lee”, email_address:”cl@cd.com")
+24.	type User.create(first_name:"Jeb", last_name:"Prawn", email_address:"jp@cd.com")
+25.	type User.create(first_name:"David", last_name:"Torn", email_address:"dt@cd.com")
+26.	type User.create(first_name:"Sara", last_name:"Wik", email_address:"sw@cd.com")
+27.	type User.create(first_name:"Betty", last_name:"Granger", email_address:"bg@cd.com")
+28.	type Blog.all (shows 5 blogs still exist from previous assignment)
+29.	type Owner.create(user:User.find(1),blog:Blog.find(1))
+30.	type Owner.create(user:User.find(1),blog:Blog.find(2))
+31.	type Owner.create(user:User.find(1),blog:Blog.find(3))
+32.	type Owner.create(user:User.find(2),blog:Blog.find(4))
+33.	type Owner.create(user:User.last,blog:Blog.find(5))
+34.	type Owner.update_all(user_id:User.find(3))
+35.	type Post.destroy_all (to clear post and messages tables from previous assignment)
+36.	type Post.create(user:User.first, blog:Blog.find(2), title:"My 1st post", content:"that I put on the 2nd blog")
+37.	type Post.create(user:User.first, blog:Blog.find(2), title:"My 2nd post", content:"on the 2nd blog again")
+38.	type Post.create(user:User.first, blog:Blog.find(2), title:"My 3rd post", content:"Still on the 2nd blog")
+39.	type Post.create(user:User.find(2), blog:Blog.last, title:"My 1st post", content:"on the last blog")
+40.	type Post.create(user:User.find(2), blog:Blog.last, title:"My 2nd post", content:"last blog again")
+41.	type Post.create(user:User.find(2), blog:Blog.last, title:"My 3rd post", content:"still on last blog")
+42.	type Post.create(user:User.find(2), blog:Blog.last, title:"My 4th post", content:"yup, on the last blog")
+43.	type Post.create(user:User.find(2), blog:Blog.last, title:"My 5th post", content:"ok fine, I'll stop spamming this blog")
+44.	type Post.create(user:User.find(3), blog:Blog.find(1), title:"Blah Blah", content:"Blah Blah Blah Blah")
+45.	type Post.create(user:User.find(3), blog:Blog.find(3), title:"I'm tired", content:"It's getting late")
+46.	type Post.create(user:User.find(3), blog:Blog.find(4), title:"Clickety Clack", content:"waa waa waa waa")
+47.	type Message.create(user:User.find(3), post:Post.first, author:"Me, duh", message:"Can I go home yet?")
+48.	type Message.create(user:User.find(3), post:Post.first, author:"still me", message:"I think I'm going crazy")
+49.	type Message.create(user:User.find(3), post:Post.find(18), author:"how could it be anyone but me?", message:"yackety yack don't talk back")
+50.	type Message.create(user:User.find(3), post:Post.find(18), author:"seriously, this is a stupid field", message:"are we there yet?")
+51.	type Message.create(user:User.find(3), post:Post.find(18), author:"Your mama", message:"straight outta IT DOESN'T MATTER")
+52.	type Message.create(user:User.find(4), post:Post.last, author:"that other guy", message:"Why am I adding more nonsense?")
+53.	type Message.create(user:User.find(4), post:Post.last, author:"who", message:"Now peter piper picked peppers and run rock rhymed")
+54.	type Message.create(user:User.find(4), post:Post.last, author:"sausage", message:"it's been a long time")
+55.	type Post.update(18, user:User.last)
+56.	type Post.update(18, content:"You're a fool!")
+57.	type User.find(3).blogs
+58.	type User.find(3).posts
+59.	type User.find(3).messages
+60.	type Post.joins(:user).where("blog_id == 1").select("*")
+61.	type messages = Blog.joins(:messages).where("blog_id == 1").select("*")
+		then using that variable just created type Message.joins(:user).where(:user_id => messages.map(&:user_id), :id => messages.map(&:id)).select("*")
+			can also type Message.joins(:user).where(:user_id => messages.map(&:user_id)).where(:id => messages.map(&:id)).select("*")
+62.	type Blog.first.owners.joins(:user).select("*")
+63.	type Owner.where("user_id == 1").where("blog_id == 1").delete_all
