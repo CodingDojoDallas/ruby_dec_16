@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Great Numbers Game</title>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Welcome to the great number game!</h1>
+            <h2>I am thinking of a number between 1 and 100</h2>
+            <h3>Take a guess!</h3>
+
+            <% if session[:state] =="found" %>
+                <div id="found"><p> <%= session[:number] %> was the number!</p>
+                    <form action='/number_game/play_again' method='get'>
+                        <input type='submit' value='Play Again'>
+                    </form>
+                </div>
+            <%elsif session[:state] =="high" %>
+                <div id="high"><p>high</p></div>
+            <% elsif session[:state] == "low" %>
+                <div id="low"><p>low</p></div>
+            <% end %>
+
+            <% if session[:state] != "found" %>
+                <div id="submit_guess">
+                    <form action='/number_game/process_guess' method='post'>
+                        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                        <input type='text' name='user_guess'>
+                        <input type='submit' value='Submit Guess'>
+                    </form>
+                </div>
+            <% end %>
+        </div>
+
+        <p><%= session[:number] %></p>
+
+    </body>
+</html>

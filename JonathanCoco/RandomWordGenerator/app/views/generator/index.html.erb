@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p> Random Word (attempt <%= session[:count] %> )</p>
+    <p> <%= session[:name] %> </p>
+
+    <form action="/generator/generate" method="get">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <input type="submit" value="Generate">
+    </form>
+</body>
+</html>
