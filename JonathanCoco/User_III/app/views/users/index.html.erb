@@ -1,0 +1,40 @@
+<h1> Listing of users </h1>
+
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Action</td>
+    </tr>
+    <% @Users.each do |user| %>
+    <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email_address %></td>
+        <td>
+            <form action='/users/<%=user.id%>/edit' method='GET'>
+                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                 <input type='submit' value='Edit'>
+            </form>
+        </td>
+        <td>
+            <form action='/users/<%=user.id%>' method='POST'>
+                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                 <input type='hidden' name='_method' value='DELETE'>
+                 <input type='submit' value='Delete'>
+            </form>
+        </td>
+
+        <td>
+            <form action='/users/<%=user.id%>' method='GET'>
+                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                 <input type='submit' value='Show'>
+            </form>
+        </td>
+    </tr>
+    <% end %>
+</table>
+
+
+<a href="/users/new">New User</a>

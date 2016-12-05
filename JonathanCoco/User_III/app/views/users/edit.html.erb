@@ -1,0 +1,15 @@
+<h1>update user name </h1>
+<form action='/users/<%= @user.id %>' method='POST'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type='hidden' name='_method' value='PATCH'>
+  <label for "first_name">First Name: </label><input type='text' name='first_name' value="<%=@user.first_name%>"><%=flash[:first_name] %><br>
+  <label for "last_name">Last Name: </label><input type='text' name='last_name' value="<%=@user.last_name%>"><%=flash[:last_name] %><br>
+  <label for "password">Password: </label><input type='password' name='password' value="<%=@user.password%>"><br>
+  <label for "email_address">Email: </label><input type='text' name='email_address' value="<%=@user.email_address%>"><%=flash[:email_address] %><br>
+  <input type='submit' value='Update'>
+</form>
+
+<br>
+
+<a href="/users">Back</a>
+<a href="/users/<%=@user.id%>">Show</a>
