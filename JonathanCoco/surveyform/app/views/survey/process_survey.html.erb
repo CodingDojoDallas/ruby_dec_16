@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey App - Result</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <p>Form has been submitted <%= flash[:submission_count] %> times </p>
+        </div>
+
+        <div id="body">
+            <p>Name: <%= session[:name] %></p>
+            <p>Language: <%= session[:language] %></p>
+            <p>Location: <%= session[:location] %> </p>
+            <p>Comment: <%= session[:comment] %></p>
+
+            <div id="container">
+                <form action="/" method="get">
+                    <input name="authenticity_token" value="<%= form_authenticity_token %>"  type="hidden">
+                    <input type="submit" value="Go Back"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
