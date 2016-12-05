@@ -1,0 +1,58 @@
+rails new dojo_ninjas
+cd dojo_ninjas
+rails g model Dojo name:string city:string state:string
+rails g model Ninja first_name:string last_name:string dojo:refer
+rake db:migrate
+rails c
+
+Dojo.create(name:"Testing")
+Dojo.create()
+Dojo.create(name:"Test2", city:"Test2", state:"TX")
+
+-----> in dojo.rb model, added:
+added "has_many :ninjas"
+validates :name, :city, :state, presence: true
+validates :state, length: {is: 2}
+
+-----> in ninja.rb model, added:
+validates :first_name, :last_name, presence: true
+
+Dojo.destroy_all
+reload!
+
+dojo1 = Dojo.new
+dojo1.save
+dojo1.errors.full_messages
+
+Dojo.create(name: "CodingDojo Silicon Valley", city: "Mountain View", state: "CA")
+Dojo.create(name: "CodingDojo Seattle", city: "Seattle", state: "WA")
+Dojo.create(name: "CodingDojo New York", city: "New York", state: "NY")
+
+
+Dojo.first.ninjas.create(first_name: "Amy", last_name: "Smith")
+Dojo.first.ninjas.create(first_name: "Bob", last_name: "Test")
+Dojo.first.ninjas.create(first_name: "Cake", last_name: "Jake")
+
+Dojo.last.ninjas.create(first_name: "Dave", last_name: "Dave")
+Dojo.last.ninjas.create(first_name: "Ed", last_name: "Ed")
+Dojo.last.ninjas.create(first_name: "Flower", last_name: "F")
+
+Dojo.find(6).ninjas.create(first_name: "Grace", last_name: "G")
+Dojo.find(6).ninjas.create(first_name: "Havoc", last_name: "H")
+Dojo.find(6).ninjas.create(first_name: "Ivan", last_name: "I")
+
+Ninja.all
+
+Dojo.first.ninjas
+Dojo.last.ninjas
+Dojo.find(6).ninjas
+
+Dojo.find(6).ninjas.select("first_name").order("created_at DESC")
+Dojo.find(6).ninjas.select("first_name").order("created_at DESC").limit(1)
+
+-----> in ninja.rb model, added:
+has_many :ninjas, :dependent => :delete_all
+
+Dojo.find(6).destroy
+Dojo.all
+Ninja.all

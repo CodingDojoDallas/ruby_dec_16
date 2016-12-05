@@ -1,0 +1,24 @@
+1.- rails new user_login_project
+2.- rails g model User fname:string lname:string email:string age:interger
+3.- rake db:migrate
+4.- rails c
+5.- user1 = User.new
+6.- user1[:fname] = "Francisco"
+7.- user1[:email] = "francisco.jose1982@gmail.com"
+8.- user1[:age] = 34
+9.- user1[:lname] = "Trujillo"
+10.- user1.save
+11.- user2 = User.new(fname:"Diego", lname:"Trujillo", age: 31, email: "trujillodiegoa@gmail.com")
+12.- user2.valid?
+13.- user2.save
+14.- User.create(fname: "Felipe", lname: "Velez",email:"elcaliente@gmail.com", age:37) 
+15.- validates :fname, :lname, :email, :age, presence: true
+16.- validates :age, numericality: {only_integer: true, greater_than_or_equal_to: 10, less_than: 150 }
+17.- faker1.errors
+18.- faker1.errors.full_messages
+19.- User.all
+20.- User.first
+21.- User.last
+22.- User.order(fname: :asc)
+23.- User.Update(3, lname: Faker::Name.last_name)
+24.- User.find(4).destroy

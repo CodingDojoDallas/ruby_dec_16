@@ -1,0 +1,51 @@
+rails new blogs
+cd blogs
+rails g model Blog name:string description:text
+rails g model Post title:string content:text blog:references
+rails g model Message author:string message:text post:references
+
+rake db:migrate
+rails c
+
+Blog.create(name: "Furry Friends", description: "A blog for cute furries")
+Blog.create(name: "Book Club", description: "Sharing my fav books")
+Blog.create(name: "Foodie", description: "Sharing my fav meals")
+Blog.create(name: "Stars", description: "Explore the galaxy with me")
+Blog.create(name: "Science is cool", description: "Because yes, yes it is")
+
+Blog.first.posts.create(title: "Dogs", content:"Cute!?!")
+Blog.first.posts.create(title: "Bunnies", content:"Cutest!!!!")
+Blog.first.posts.create(title: "Cats", content:"The best!!!!")
+
+Blog.find(2).posts.create(title: "Deception Point", content:"Thrilling")
+Blog.find(2).posts.create(title: "Harry Potter", content:"Magical")
+
+Blog.find(3).posts.create(title: "Korean Bingsu", content:"Reminds me of ais kachang from Malaysia!")
+Blog.find(3).posts.create(title: "Ice cream", content:"WE SCREAM!")
+
+Blog.find(4).posts.create(title: "Sun", content:"Global favorite!")
+Blog.find(4).posts.create(title: "Sirius", content:"Sirius, also known as the Dog Star, is the brightest star in the night sky.")
+
+Blog.find(5).posts.create(title: "Bill Nye", content:"The science guy!")
+Blog.find(5).posts.create(title: "Chemistry", content:"The glue between physics and biology")
+
+Post.first.messages.create(author: "Amy", message:"I loveee dogs! My fav are corgies :D")
+Post.first.messages.create(author: "Emily", message:"I love shiba inu's! I want one!")
+Post.first.messages.create(author: "Bob", message:"They're alright...")
+
+Post.first.messages.all
+Blog.first.posts.all
+Blog.last.posts.all.order("title DESC")
+
+Post.update(1, title:"Doggies heheh<3")
+
+Post.find(3).messages.create(author: "333", message:"I loveee dogs! My fav are corgies :D")
+Post.find(3).messages.create(author: "333", message:"I love shiba inu's! I want one!")
+
+Post.find(3).destroy
+
+Blog.all
+
+Blog.where("id < ?", 5)
+
+Blog.select("name").where("id < ?", 5)
