@@ -30,8 +30,14 @@ NOTE: If you don't get in at least one pull request daily, then *_ya ain't serio
 ## Videos
 
 Bank Account OOP - https://youtu.be/p4t1-0Gvl6Y
+
 Ruby TDD - https://youtu.be/YSVnP5p9ly0
+
 Bank Account TDD - https://youtu.be/lNOHQzmf5yk
+
+Blogs/Posts/Messages II - https://youtu.be/ezDWz9IFmi0
+
+Intro to Controllers - https://youtu.be/i2T9H-G3Stg
 
 ## Resources
 
@@ -39,6 +45,32 @@ http://guides.rubyonrails.org/index.html
 
 http://ruby-doc.org/core-2.2.2/
 
+http://www.rubyinside.com/
+
+https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+
+http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html
+
+http://api.rubyonrails.org/classes/ActiveModel/Validations/HelperMethods.html
+
+## Articles
+
+https://gist.github.com/MilanGrubnic70/11092705
+
 http://mixandgo.com/blog/mastering-ruby-blocks-in-less-than-5-minutes
 
-http://www.rubyinside.com/
+http://www.spacevatican.org/2008/5/6/creating-multiple-associations-with-the-same-table/
+
+https://launchschool.com/blog/understanding-polymorphic-associations-in-rails
+
+https://robots.thoughtbot.com/whats-the-deal-with-rails-polymorphic-associations
+
+http://culttt.com/2016/01/13/creating-polymorphic-relationships-in-ruby-on-rails/
+
+http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks
+
+An important note:
+*before_save* is called every time an object is saved. So for new and existing objects. (create and update action)
+*before_create* only before creation. So only for new objects (create action, but not update)
+
+

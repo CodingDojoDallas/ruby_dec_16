@@ -1,0 +1,56 @@
+1.  in terminal go into directory where you want the project folder to be (using cd commands)
+2.     type rails new blogs
+3.     type cd blogs - to go into the project folder
+4.  open folder in sublime - go to gemfile - add any gems needed type gem ‘hirb’
+5.  back in terminal type bundle install
+6.  in separate terminal tab open rails console by typing rails console or rails c
+7.  in a 3rd terminal tab start server by typing rails server or rails s
+8.  in original terminal tab type rails g model Blog name:string description:text
+9.    type rails g model Post title:string content:text blog:references
+10.   type rails g model Message author:string message:text post:references
+11. in sublime go to blog.rb found at blogs/app/models/blog.rb
+12.   for relationships/associations inside class type has_many :posts, dependent: :destroy
+	   on next line type has_many :messages, through: :posts, dependent: :destroy
+13.   for validations on next line type validates :name, :description, presence: true
+14. in sublime go to post.rb found at blogs/app/models/post.rb
+15.   for relationships/associations inside class type has_many :messages, dependent: :destroy
+16.   for validations on next line type validates :title, :content, presence: true
+17.       next line type validates :title, length: { minimum: 7 }
+18. in sublime go to message.rb found at blogs/app/models/message.rb
+19.   for validations inside class type validates :author, :message, presence: true
+20.       next line type validates :message, length: { minimum: 15 }
+21. in original terminal type rake db:migrate
+22. in rails console terminal tab type Hirb.enable
+23. Back in rails console in terminal test validations but first type reload! to update changes to file
+24.   type Blog.create(name:"what to name a title?", description:"I hate thinking up fake data")
+25.   type Blog.create(name:"Making up fake data", description:"Why is it so hard?")
+26.   type Blog.create(name:"I'm a bit behind", description:"Gotta play some catch-up")
+27.   type Blog.create(name:"What should I do next", description:"Just kidding, I know what I'm going to do already")
+28.   type Blog.create(name:"This is the 5th blog", description:"and it's the last I need for this assignment")
+29.   type Post.create(blog:Blog.find(1), title:"Name it something stupid", content:"Like the title to this post!")
+30.   type Post.create(blog:Blog.find(1), title:"post number 2 on blog number 1", content:"hey, I'm the 2nd post")
+31.   type Post.create(blog:Blog.find(1), title:"post number 3 on blog number 1", content:"hey, I'm the 3rd post")
+32.   type Post.create(blog:Blog.find(1), title:"post number 4 on blog number 1", content:"hey, I'm the 4th post")
+33.   type Post.create(blog:Blog.find(2), title:"post number 1 on blog number 2", content:"hey, I'm the 1st post")
+34.   type Post.create(blog:Blog.find(2), title:"post number 2 on blog number 2", content:"hey, I'm the 2nd post")
+35.   type Post.create(blog:Blog.find(2), title:"post number 3 on blog number 2", content:"hey, I'm the 3rd post")
+36.   type Post.create(blog:Blog.find(3), title:"post number 1 on blog number 3", content:"hey, I'm the 1st post")
+37.   type Post.create(blog:Blog.find(3), title:"post number 2 on blog number 3", content:"hey, I'm the 2nd post")
+38.   type Post.create(blog:Blog.find(3), title:"post number 3 on blog number 3", content:"hey, I'm the 3rd post")
+39.   type Post.create(blog:Blog.find(4), title:"post number 1 on blog number 4", content:"hey, I'm the 1st post")
+40.   type Post.create(blog:Blog.find(4), title:"post number 2 on blog number 4", content:"hey, I'm the 2nd post")
+41.   type Post.create(blog:Blog.find(4), title:"post number 3 on blog number 4", content:"hey, I'm the 3rd post")
+42.   type Post.create(blog:Blog.find(5), title:"post number 1 on blog number 5", content:"hey, I'm the 1st post")
+43.   type Post.create(blog:Blog.find(5), title:"post number 2 on blog number 5", content:"hey, I'm the 2nd post")
+44.   type Post.create(blog:Blog.find(5), title:"post number 3 on blog number 5", content:"hey, I'm the 3rd post")
+45.   type Message.create(post:Post.find(1), author:"Chris", message:"who you calling stupid?")
+46.   type Message.create(post:Post.find(1), author:"Jeb", message:"You now since you had to chime in!")
+47.   type Message.create(post:Post.find(1), author:"Chris", message:"Boy you better watch you mouth!")
+48.   type Message.create(post:Post.find(1), author:"Jeb", message:"Whatcha gonna do bout it?")
+49.   type Message.create(post:Post.find(3), author:"Dave", message:"Yay, good for you, third post, that's amazing!")
+50.   type Blog.find(1).posts  (or Blog.first.posts)
+51.   type Blog.last.posts.order(title: :desc)
+52.   type Blog.first.posts.first.update(title:"Scratch that, make it something moronic!")
+53.   type Blog.first.posts.find(3).destroy  (messages will automatically be deleted because of the “dependent: :destroy”
+54.   type Blog.all
+55.   type Blog.where("id < 5")

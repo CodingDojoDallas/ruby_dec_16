@@ -1,0 +1,46 @@
+1.  in terminal go into directory where you want the project folder to be (using cd commands)
+2.     type rails new user_login_project
+3.     type cd user_login_project - to go into the project folder
+4.  open folder in sublime - go to gemfile - add any gems needed type gem ‘hirb’
+5.  back in terminal type bundle install
+6.  in separate terminal tab open rails console by typing rails console or rails c
+7.  in a 3rd terminal tab start server by typing rails server or rails s
+8.  in original terminal tab type rails g model User first_name:string last_name:string email_address:string age:integer
+9.    type rake db:migrate
+10. in rails console terminal tab type Hirb.enable
+11.   For new entry into database type user1 = User.new
+12.      type user1[:first_name] = ‘Chris’
+13.      type user1[:last_name] = ‘Ulanowicz’
+14.      type user1[:email_address] = ‘cu@fake.com’
+15.      type user1[:age] = 38
+16.      type user1.save
+17.   2nd method for new entry (a bit better and shorter) type user2 = User.new(first_name:”Ben”, last_name:”Parker”,
+		email_address:”bp@fake.com”, age:62)
+18.      type user2.save
+19.   3rd method for new entry (best n shortest) type User.create(first_name:”May”, last_name:”Parker”, email_address:
+		“mp@fake.com”, age:64)
+20.   testing new_record? method type user1.new_record?
+		This will return ‘=> false’
+21.   type user3 = User.new
+22.   type user3.new_record?  This will return ‘=> true’ meaning the object exists but doesn’t exist within the database
+		yet (it hasn’t been saved)
+23.   type user4.new_record?  This will return an error since the object hasn’t been defined yet
+24. For Validations go to sublime and open user.rb file found at user_login_project/app/models/user.rb
+25.   inside of class add - validates :first_name, :last_name, :email_address, :age, presence: true
+26.      add - validates :first_name, :last_name, length: {minimum: 2}
+27.      add - validates :age, numericality: { only_integer: true, greater_than: 9, less_than: 151 }
+28. Back in rails console in terminal test validations - type reload! to update changes to file
+29.   type user6 = User.new
+30.   type user6.save and you’ll get something that says rollback and => false
+31.   type user6.errors to see list of validation errors
+32.   type user6.errors.full_messages to see validation error messages
+33.   check other validations by typing in various things to intentionally fail and check
+		basically just repeat steps 29-32 with different intentional failures
+34.   type User.all to show all users
+35.   type User.first to show first user in database table
+36.   type User.last to show last user in database table
+37.   type User.order(first_name: :desc) to order by first name
+38.   type User.update(3, last_name:”Lee”) to update entry OR
+		can also type User.find(3).update(last_name:”Lee”)
+39.   type User.find(3).destroy to delete that user
+
