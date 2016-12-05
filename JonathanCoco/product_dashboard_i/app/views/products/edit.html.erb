@@ -1,0 +1,24 @@
+<h1>update product </h1>
+<form action='/products/<%= @product.id %>' method='POST'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type='hidden' name='_method' value='PATCH'>
+  <label for "name">Name: </label><input type='text' name='product[name]' value="<%=@product.name%>"><%=flash[:name] %><br>
+  <label for "description">Description: </label><input type='text' name='product[description]' value="<%=@product.description%>"><%=flash[:description] %><br>
+  <label for "product[category_id]">Category: </label>
+  <select name="product[category_id]">
+    <% @categories.each do |category| %>
+      <% if @product.category_id == category.id %>
+        <option selected value="<%=category.id%>"><%=category.category%></option>
+      <% else %>
+        <option value="<%=category.id%>"><%=category.category%></option>
+      <% end %>
+    <% end %>
+  </select><br>
+  <label for "pricing">Pricing: </label><input type='text' name='product[pricing]' value="<%=@product.pricing%>"><%=flash[:pricing] %><br>
+  <input type='submit' value='Update'>
+</form>
+
+<br>
+
+<a href="/products">Back</a>
+<a href="/products/<%=@product.id%>">Show</a>
