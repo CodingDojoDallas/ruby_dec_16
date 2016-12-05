@@ -1,0 +1,447 @@
+
+
+Started GET "/" for ::1 at 2016-12-04 07:24:40 -0600
+Processing by NumberGameController#index as HTML
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `nill' for #<NumberGameController:0x5759718>):
+  app/controllers/number_game_controller.rb:3:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (716.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1212.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2090.1ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:24:53 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+SyntaxError (c:/codingdojo/rails/projects/controllers_views/GreatNumberGame/app/views/number_game/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting keyword_end
+c:/codingdojo/rails/projects/controllers_views/GreatNumberGame/app/views/number_game/index.html.erb:39: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/number_game/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/number_game/index.html.erb:39: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (716.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (692.8ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1574.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:25:38 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1386ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    2: <html>
+    3: <head>
+    4:   <title>GreatNumberGame</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__452377079_51195828'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (848.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (677.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1547.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:26:27 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 621ms (Views: 345.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/number_game.self-7a791f8bfc9405927cc8974db32dc8a2fe1677d2160e05f9b0fa86087379b301.css?body=1" for ::1 at 2016-12-04 07:26:27 -0600
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:26:33 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"9gVTpJwLxhy2Xbs9w72jHrdx2vUMIRQqZgAwx4EzfWIG9kvZGXDz6rM6TEHfglQm7Pmn6qiaTZv/NBOjSDD7hA==", "user_guess"=>"55"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 247ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:26:33 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 405ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:26:40 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"Ls5yYrjN9KLfnxITbfdKK6TTOKweu0pvn6XFDR+5lBbePWofPbbBVNr45W9xyL0T/1tFs7oAE94GkeZp1roS8A==", "user_guess"=>"55"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 246ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:26:40 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 336ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:27:20 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 350ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:27:23 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"w3gSeHSSA6nTW2DmD+KQwZOJ2bsQhfauVYGGiTZi29IziwoF8ek2X9Y8l5oT3Wf5yAGkpLQ+rx/MtaXt/2FdNA==", "user_guess"=>"44"}
+  Rendered text template (0.0ms)
+Redirected to 
+Completed 500 Internal Server Error in 12ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/number_game_controller.rb:24:in `process_guess'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (715.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (662.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1530.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:27:39 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 343ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:27:44 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"hNFvqJPvbqktkrQvZ4ZUodVU/LnF31S0fB8NeYLHh2R0InfVFpRbXyj1Q1N7uaOZjtyBpmFkDQXlKy4dS8QBgg==", "user_guess"=>"55"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 248ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/number_game/process_guess" for ::1 at 2016-12-04 07:28:23 -0600
+
+ActionController::RoutingError (No route matches [GET] "/number_game/process_guess"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (962.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (678.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1684.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:28:31 -0600
+
+SyntaxError (c:/codingdojo/rails/projects/controllers_views/GreatNumberGame/app/controllers/number_game_controller.rb:22: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+     render :text =>  guess  session[:number]
+                                    ^):
+  app/controllers/number_game_controller.rb:22: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (714.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (672.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1541.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:28:51 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 344ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:28:57 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"I0Bc9YrBEei6tkQ/DgCoqqPe75FOqh18ayLFmjFehELTs0SID7okHr/Rs0MSP1+S+FaSjuoRRM3yFub++F0CpA==", "user_guess"=>"55"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 243ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:30:26 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 341ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:30:34 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"zyZKYHO5yAoMaLEVbeWVULh3lRLkfzdlWuCSxjCx+QE/1VId9sL9/AkPRmlx2mJo4//oDUDEbtTD1LGi+bJ/5w==", "user_guess"=>"77"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 249ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:30:49 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 340ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:30:57 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"5rhh8CsMq66zxFU7GTfaY+77h0LHaekDifzMA8IGt34WS3mNrneeWLajokcFCC1btXP6XWPSsLIQyO9nCwUxmA==", "user_guess"=>"77"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 248ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:30:57 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 337ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:31:04 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"S0XBiO+JKvvFNIty//lr9KGHmEkFsyBsFWARkl0X4OO7ttn1avIfDcBTfA7jxpzM+g/lVqEIed2MVDL2lBRmBQ==", "user_guess"=>"33"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 247ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:31:04 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 343ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:32:40 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 348ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:33:34 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 349ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:33:40 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"9L2kXtZ/FFY9rZTVPvr8Hxh2NOOtMAcJxd7VTNvjrrEETrwjUwQhoDjKY6kixQsnQ/5J/AmLXrhc6vYoEuAoVw==", "user_guess"=>"77"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 353ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:33:41 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 378ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:33:46 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"RFhSjyt4kAMOD1QnWrQtlod0q6Ogd4v5uIcrGMLOQnW0q0ryrgOl9Qtoo1tGi9qu3PzWvATM0kghswh8C83Ekw==", "user_guess"=>"67"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 281ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:33:46 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 348ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:35:24 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 349ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/play_again" for ::1 at 2016-12-04 07:35:26 -0600
+
+ActionController::RoutingError (No route matches [POST] "/number_game/play_again"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (955.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (675.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1552.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:35:45 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 342ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/number_game/play_again" for ::1 at 2016-12-04 07:35:47 -0600
+Processing by NumberGameController#play_again as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 244ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:35:48 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 341ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:35:53 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"CE5KBNM6UKw+ZZNPXSVa1nTy7wB31PGMmnIPExIo7AD47HxX3F3Dgn/FFPf224VlfxtGF3AsVfcKFyunV/jlWw==", "user_guess"=>"33"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 248ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:35:53 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 348ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:35:59 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"j1OUjtJmQ3zpFAOHid1an/RDD/JP3Hic/bKzNcaDbit/8aLd3QHQUqi0hD8iI4Us/6qm5Ugk3Odt15eBg1NncA==", "user_guess"=>"2"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 253ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:35:59 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 338ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/number_game/process_guess" for ::1 at 2016-12-04 07:36:05 -0600
+Processing by NumberGameController#process_guess as HTML
+  Parameters: {"authenticity_token"=>"ATP74b0ZsgjfZBPqGyZ+9Z64I2aF1/c4c17+KbN6mh/xkc2ysn4hJp7ElFKw2KFGlVGKcYIvU0PjO9qd9qqTRA==", "user_guess"=>"19"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 248ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:36:05 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 334ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:36:26 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 355ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/number_game/play_again" for ::1 at 2016-12-04 07:36:29 -0600
+Processing by NumberGameController#play_again as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 246ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 07:36:30 -0600
+Processing by NumberGameController#index as HTML
+  Rendered number_game/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 348ms (Views: 75.6ms | ActiveRecord: 0.0ms)
