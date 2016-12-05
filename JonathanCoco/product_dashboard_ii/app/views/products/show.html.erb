@@ -1,0 +1,22 @@
+<h1>Show Product </h1>
+<p>Name: <%=@product.name%></p>
+<p>Description: <%=@product.description%></p>
+<p>Category: <%=@product.category.category%></p>
+<p>Pricing: <%=@product.pricing%></p>
+<br>
+<a href="/products">Back</a>
+<a href="/products/<%=@product.id%>/edit">Edit</a>
+
+<br>
+<br>
+
+<form action='/comments' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input name="comment[product_id]" value="<%=@product.id%>" type="hidden">
+  <label for "Comment">Comment: </label><textarea rows="4" cols="50" name='comment[comment]'></textarea><br>
+  <input type='submit' value='Create'>
+</form>
+
+<% @product.comments.each do |comment| %>
+  <p> <%=comment.comment%> <%=comment.created_at%> </p>
+<% end %>
