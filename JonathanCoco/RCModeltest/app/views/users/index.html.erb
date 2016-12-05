@@ -1,0 +1,55 @@
+<h1> list of users </h1>
+
+<p> Number of times visited this page <%= session[:count_refresh] %> </p>
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Created at</td>
+        <td>Action</td>
+    </tr>
+    <% @Users.each do |user| %>
+    <tr>
+        <td><%= user.name %></td>
+        <td><%= user.created_at %></td>
+        <td>
+            <form action='/users/<%=user.id%>/edit' method='GET'>
+                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                 <input type='submit' value='Edit'>
+            </form>
+        </td>
+        <td>
+            <form action='/users/<%=user.id%>' method='POST'>
+                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                 <input type='hidden' name='_method' value='DELETE'>
+                 <input type='submit' value='Delete'>
+            </form>
+        </td>
+
+        <td>
+            <form action='/users/<%=user.id%>' method='GET'>
+                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                 <input type='submit' value='Show'>
+            </form>
+        </td>
+    </tr>
+    <% end %>
+</table>
+
+<form action='/users/new' method='GET'>
+     <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+     <input type='submit' value='New User'>
+</form>
+
+<form action='/users/total' method='GET'>
+     <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+     <input type='submit' value='Total Test'>
+</form>
+
+<br>
+<br>
+
+<p>flash test </p>
+<% flash.each do |key, value| %>
+    <p><%=key%> - <%=value%>
+<% end %>
