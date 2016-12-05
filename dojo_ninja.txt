@@ -1,0 +1,63 @@
+1.
+  rails new dojo_ninja
+  cd dojo_ninja
+2.
+  rails g model Dojo name:string city:string state:string
+  rake db:migrate
+  rails g model Ninja first_name:string last_name:string
+  rake db:migrate
+3.
+  Dojo.create(name:'CodingDojo SiliconValley', city:'Mountain View', state:'CA')
+  Dojo.create(name:'CodingDojo Seatle', city:'Seattle', state:'WA')
+  Dojo.create(name:'CodingDojo New York', city:'New York', state:'NY')
+4. &  5.
+  class Dojo < ActiveRecord::Base
+    has_many :ninjas
+    validates :state, length: {is: 2}
+    validates :name, :city, :state, presence: true
+  end
+  class Ninja < ActiveRecord::Base
+    belongs_to :dojo
+    validates :first_name, :last_name, presence: true
+  end
+6.
+  1. upto(3){|i| Dojo.destroy(i)}
+  2.
+    dojo1[:name] = "CodingDojo Silicon Valley"
+    dojo1[:city] = "Mountain View"
+    dojo1[:state] = "CA"
+    dojo1.save
+    dojo2[:name] = "CodingDojo Seattle"
+    dojo2[:city] = "Seattle"
+    dojo2[:state] = "WA"
+    dojo2.save
+    dojo3[:name] = "CodingDojo New York"
+    dojo3[:city] = "New York"
+    dojo3[:state] = "NY"
+    dojo3.save
+  3.
+    dojo4.save
+    (0.1ms)  begin transaction
+    (0.1ms)  rollback transaction
+    dojo4.errors.full_messages
+    => ["State is the wrong length (should be 2 characters)"]
+  4.
+    Dojo.first.ninjas.create(first_name: 'Steve', last_name:'Jobs')
+    Dojo.first.ninjas.create(first_name: 'Charles', last_name:'Flint')
+    Dojo.first.ninjas.create(first_name: 'Paul', last_name:'Allen')
+  5.
+    Dojo.second.ninjas.create(first_name:'Wally', last_name:'Zerbick')
+    Dojo.second.ninjas.create(first_name:'Bert', last_name:'Einstein')
+    Dojo.second.ninjas.create(first_name:'Van', last_name:'Gold')
+  6.
+    Dojo.third.ninjas.create(first_name:'Michael', last_name:'Jordan')
+    Dojo.third.ninjas.create(first_name:'Joe', last_name:'Montana')
+    Dojo.third.ninjas.create(first_name:'Bo', last_name:'Jackson')
+  7.
+    Dojo.first.ninjas.all
+    Dojo.second.ninjas.all
+    Dojo.third.ninjas.all
+  8.
+    Dojo.second.ninjas.select(:first_name).order(created_at: :desc)
+  9.
+    has_many :ninjas, dependent: :destroy
