@@ -1,0 +1,18 @@
+
+
+Started GET "/" for ::1 at 2016-12-05 17:56:46 -0600
+Processing by TimesController#main as HTML
+  Rendered times/main.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 2258ms (Views: 2204.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/times.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-12-05 17:56:49 -0600
+
+
+Started GET "/assets/times.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2016-12-05 17:56:49 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-12-05 17:56:49 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-12-05 17:56:49 -0600
