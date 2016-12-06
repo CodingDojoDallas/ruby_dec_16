@@ -1,0 +1,33 @@
+-------------------------------------------
+
+rails g model Comment author:string message:text commentable:references{polymorphic}
+
+--->then added to the modes of a user, blog, post and message:
+has_many :comments, as: :commentable
+
+---> Created new migration file:
+class AddCommentableToEverything < ActiveRecord::Migration
+  def change
+    add_reference :blogs, :commentable, index: true
+    add_reference :users, :commentable, index: true
+    add_reference :messages, :commentable, index: true
+    add_reference :posts, :commentable, index: true
+
+  end
+end
+
+Comment.create(user:User.first, author:User.first.full_name, message: "This is a test!", commentable:Blog.last)
+Comment.first.commentable
+
+Post.find(2).comments.create(user:User.second, author:User.second.full_name, message: "Another one!")
+Post.second.comments
+
+Blog.last.comments.create(user:User.first, author:User.first.full_name, message: "REAL COMMENT!!!")
+
+Message.find(11).comments.create(user:User.fourth, author: User.fourth.full_name, message: "Helloo :D")
+
+Comment.create(user:User.fourth, author: User.fourth.full_name, message: "Helloo :D", commentable:User.find(3))
+
+Comment.find(3).update(message:"UPDATED~!")
+
+Comment.last.destroy

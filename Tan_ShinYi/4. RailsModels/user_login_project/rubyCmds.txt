@@ -1,0 +1,49 @@
+rails new user_login_project
+cd user_login_project
+rails g model User first_name:string last_name:string email_address:string age:integer
+rake db:migrate
+rails c
+
+User.create(first_name:"Jon", last_name:"Stark", email_address:"test@test.com", age:17)
+user1 = User.new(first_name:"Grace")
+user1.save
+
+user1.new_record?
+
+user2 = User.new(first_name:"Amy")
+user2.new_record?
+
+Added the following to my user.rb model file:
+class User < ActiveRecord::Base
+  validates :first_name, :last_name, presence: true, length: {minimum: 2}
+  validates :email_address, presence: true
+  validates_numericality_of :age, on: :create, greater_than: 9, less_than: 150
+end
+
+reload!
+
+user1 = User.new(first_name:"Grace2")
+user1[:last_name]="TEST"
+user1[:email_address]="a@a.com"
+user1[:age]=5
+user1.valid?
+user1.save
+user1.errors.full_messages
+=> ["Age must be greater than 9"]
+user1[:age]=155
+user1.errors.full_messages
+=> ["Age must be less than 150"]
+user1[:age]=20
+user1.save
+
+User.all
+User.first
+User.last
+User.order("first_name DESC")
+
+User.update(3, last_name:"hello", email_address:"hello@test.com", age:17)
+user1 = User.find(3)
+user1[:last_name] = "Hello"
+user1.save
+
+User.find(4).destroy
