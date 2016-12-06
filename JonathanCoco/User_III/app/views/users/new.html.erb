@@ -1,0 +1,9 @@
+<h1> create a new user </h1>
+<form action='/users' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <label for "first_name">First Name: </label><input type='text' name='first_name' value="<%=@user.first_name%>"> <%=flash[:first_name] %><br>
+  <label for "last_name">Last Name: </label><input type='text' name='last_name' value="<%=@user.last_name%>"><%=flash[:last_name] %><br>
+  <label for "password">Password: </label><input type='password' name='password'><br>
+  <label for "email_address">Email: </label><input type='text' name='email_address' value="<%=@user.email_address%>"><%=flash[:email_address] %><br>
+  <input type='submit' value='Create'>
+</form>
