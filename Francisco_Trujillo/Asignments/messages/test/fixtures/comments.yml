@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  : 
+  polymorphic: MyString
+  'true': MyString
+
+two:
+  : 
+  polymorphic: MyString
+  'true': MyString

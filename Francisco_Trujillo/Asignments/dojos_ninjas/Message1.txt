@@ -1,0 +1,17 @@
+5.times{Blog.create(name: Faker::Name.name, description: Faker::ChuckNorris.fact)}
+
+20.times{Blog.find(rand(1..5)).posts.create(title: Faker::Lorem.sentence, content: Faker::Lorem.paragraphs)}
+
+20.times{Post.first.messages.create(author: Faker::Name.name, message: Faker::Hipster.sentence)}
+
+Blog.first.posts
+Blog.last.posts.order("created_at DESC")
+
+Post.update(1, title: Faker::Hipster.sentence)
+
+Post.find(3).destroy . model shoud have dependent: :destroy
+
+Blog.all
+
+
+Blog.where("id < 5")
