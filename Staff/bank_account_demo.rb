@@ -1,3 +1,6 @@
+class TransactionError < StandardError
+end
+
 class BankAccount
 	@@total_accounts = 0
 
@@ -35,13 +38,13 @@ class BankAccount
 		case account
 		when 'checking'
 			if @checking < amount
-				puts 'insufficient funds'
+				raise TransactionError, 'insufficient funds'
 			else
 				@checking -= amount
 			end
 		when 'savings'
 			if @savings < amount
-				puts 'insufficient funds'
+				raise TransactionError, 'insufficient funds'
 			else
 				@savings -= amount
 			end
@@ -65,6 +68,4 @@ class BankAccount
 			(0...11).each {@account_number += rand(0...9).to_s}
 		end
 end
-a = BankAccount.new
-b = BankAccount.new
-BankAccount.total_accounts
+

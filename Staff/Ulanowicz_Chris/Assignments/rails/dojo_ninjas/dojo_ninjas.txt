@@ -1,0 +1,48 @@
+1.  in terminal go into directory where you want the project folder to be (using cd commands)
+2.     type rails new dojo_ninjas
+3.     type cd dojo_ninjas - to go into the project folder
+4.  open folder in sublime - go to gemfile - add any gems needed type gem ‘hirb’
+5.  back in terminal type bundle install
+6.  in separate terminal tab open rails console by typing rails console or rails c
+7.  in a 3rd terminal tab start server by typing rails server or rails s
+8.  in original terminal tab type rails g model Dojo name:string city:string state:string
+9.    type rails g model Ninja first_name:string last_name:string dojo:references
+10. in sublime go to dojo.rb found at dojo_ninjas/app/models/dojo.rb
+11.   inside class type has_many :ninjas
+12. in original terminal type rake db:migrate
+13. in rails console terminal tab type Hirb.enable
+14.   type Dojo.create(name:"CodingDojo Silicon Valley", city:"Mountain View", state:"CA”)
+15.   type Dojo.create(name:"CodingDojo Seattle”, city:”Seattle”, state:”WA”)
+16.   type Dojo.create(name:"CodingDojo New York”, city:”New York”, state:”NY”)
+17. For Validations go to sublime and open dojo.rb file found at dojo_ninjas/app/models/dojo.rb
+18.   inside of class add - validates :name, :city, :state, presence: true
+19.      add - validates :state, length: { is: 2 }
+20.   open ninja.rb file in sublime found at dojo_ninjas/app/models/ninja.rb
+21.      inside of class add - validates :first_name, :last_name, presence: true
+22. Back in rails console in terminal test validations - type reload! to update changes to file
+23.   type Dojo.destroy_all to delete all records in the table
+24.   type dojo1 = Dojo.new(name:"CodingDojo Silicon Prairie”, city:”Dallas”, state:”TX”)
+25.   type dojo1.save
+26.   type dojo2 = Dojo.new(name:"CodingDojo Windy City", city:"Chicago", state:"IL")
+27.   type dojo2.save
+28.   type dojo3 = Dojo.new(name:"CodingDojo White House”, city:”Tyson’s Corner”, state:”VA”)
+29.   type dojo3.save
+30.   create dojos to intentionally fail validations and verify they’re working
+31.   type Ninja.create(first_name:”Chris”, last_name:”Ulanowicz”, dojo_id:5)
+32.   type Ninja.create(first_name:"Terry", last_name:"Thomas”, dojo_id:5)
+33.   type Ninja.create(first_name:"Oscar", last_name:"Cortazar", dojo_id:5)
+34.   type Ninja.create(first_name:”Al”, last_name:”Capone”, dojo_id:6)
+35.   type Ninja.create(first_name:”Oprah”, last_name:”Winfrey”, dojo_id:6)
+36.   type Ninja.create(first_name:”Abe”, last_name:”Lincoln”, dojo_id:6)
+37.   type Ninja.create(first_name:”George”, last_name:”Washington”, dojo_id:7)
+38.   type Ninja.create(first_name:”John”, last_name:”Adams”, dojo_id:7)
+39.   type Ninja.create(first_name:”Thomas”, last_name:”Jefferson”, dojo_id:7)
+40.   type Dojo.find(5).ninjas to get all ninjas that belong to dojo with id of 5
+41.   type Dojo.find(6).ninjas to get all ninjas that belong to dojo with id of 6
+42.   type Dojo.find(7).ninjas to get all ninjas that belong to dojo with id of 7
+43.   type Dojo.find(6).ninjas.select("first_name").order(first_name: :desc)
+44. Go to sublime dojo.rb file and on same line as ‘has_many :ninjas’ change to
+		‘has_many :ninjas, dependent: :destroy’
+45. Go to rails console in terminal and type reload! to update model changes
+46.   type Dojo.find(7).destroy which will also delete the ninjas that belong to that Dojo because of
+		the change we made on in line 44.
