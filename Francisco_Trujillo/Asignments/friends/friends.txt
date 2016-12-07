@@ -1,0 +1,25 @@
+class Friendship < ActiveRecord::Base
+	
+	belongs_to :user, class_name: "User", foreign_key: "user_id"
+	belongs_to :friend, class_name: "User", foreign_key: "friend_id"
+end
+
+Here it will do the relation ships to the friend tables
+
+class User < ActiveRecord::Base
+	has_many :friends, class_name: "Friendship" 
+	belongs_to :user, class_name: "User", foreign_key: "friend_id"
+end
+//creates the relation ship many to many
+
+class CreateFriendships < ActiveRecord::Migration
+  def change
+    create_table :friendships do |t|
+      t.references :friend, index: true
+
+      t.timestamps
+    end
+  end
+end
+
+User.first.create(friend: User.second)
