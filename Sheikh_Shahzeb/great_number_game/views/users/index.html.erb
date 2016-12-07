@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Html</title>
+</head>
+<body>
+	<h3>Welcome to the Great Number Game!</h3>
+	<h4>I am thinking of a number between 1 and 100</h4>
+	<p>Take a guess!</p>
+	<a href="/clear">Generate New Number</a>
+	<form action="/submit" method="get">
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<input type="number" name="number">
+		<input type="submit" value="submit">
+	</form>
+	<h6><%=flash[:notice]%>
+</body>
+</html>
