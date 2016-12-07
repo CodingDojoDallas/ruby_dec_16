@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body class="container">
+	<h3>Great Number Game</h3>
+	<h4>Guess a Number between 1 and 100</h4>
+	<div class="bg-danger"><%= flash[:answer]%></div>
+	<div class="bg-success"><%= flash[:win]%></div>
+	<form action="/games/check" method="post">
+		<div class="form-group">
+			<label for="number"> Your Number</label>
+			<input type="text" name="guess[num]" id="number" placeholder = "Enter number here" class="form-control">
+		</div>
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<button type="submit" class="btn btn-info">Play</button>
+	</form> <br>
+	
+	<a href="/games/clear" type="button" class="btn btn-danger">Reset</a>
+	
+</body>
+</html>

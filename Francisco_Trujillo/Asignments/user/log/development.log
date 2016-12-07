@@ -1,0 +1,1694 @@
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePeople (20161205224835)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20161205224835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161205224835"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.553125"], ["name", "Dr. Riley Terry"], ["updated_at", "2016-12-05 22:56:40.553125"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.562588"], ["name", "Domenick Ruecker"], ["updated_at", "2016-12-05 22:56:40.562588"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.566125"], ["name", "Morton Hoeger"], ["updated_at", "2016-12-05 22:56:40.566125"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.569469"], ["name", "Gia Wyman"], ["updated_at", "2016-12-05 22:56:40.569469"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.573164"], ["name", "Mariana Lang"], ["updated_at", "2016-12-05 22:56:40.573164"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.576803"], ["name", "Aurelia Ondricka"], ["updated_at", "2016-12-05 22:56:40.576803"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.580279"], ["name", "Brian Little"], ["updated_at", "2016-12-05 22:56:40.580279"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.583304"], ["name", "Estrella Stamm"], ["updated_at", "2016-12-05 22:56:40.583304"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.586836"], ["name", "Bill Kautzer"], ["updated_at", "2016-12-05 22:56:40.586836"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.589870"], ["name", "Billy Senger"], ["updated_at", "2016-12-05 22:56:40.589870"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.599342"], ["name", "Dovie Shields V"], ["updated_at", "2016-12-05 22:56:40.599342"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.604392"], ["name", "Rene Gottlieb"], ["updated_at", "2016-12-05 22:56:40.604392"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.607971"], ["name", "Shany Kutch"], ["updated_at", "2016-12-05 22:56:40.607971"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.613383"], ["name", "Milton Smith IV"], ["updated_at", "2016-12-05 22:56:40.613383"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.616498"], ["name", "Edgardo O'Reilly Jr."], ["updated_at", "2016-12-05 22:56:40.616498"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.619553"], ["name", "Colt Lehner"], ["updated_at", "2016-12-05 22:56:40.619553"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.622212"], ["name", "Greta Schinner"], ["updated_at", "2016-12-05 22:56:40.622212"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.625116"], ["name", "Jacklyn Davis"], ["updated_at", "2016-12-05 22:56:40.625116"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.628388"], ["name", "Westley Rodriguez"], ["updated_at", "2016-12-05 22:56:40.628388"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.631438"], ["name", "Warren Yundt"], ["updated_at", "2016-12-05 22:56:40.631438"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.634561"], ["name", "Savannah Rohan I"], ["updated_at", "2016-12-05 22:56:40.634561"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.646104"], ["name", "Gracie McDermott"], ["updated_at", "2016-12-05 22:56:40.646104"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.649157"], ["name", "Declan Lockman"], ["updated_at", "2016-12-05 22:56:40.649157"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.652118"], ["name", "Florencio Zieme PhD"], ["updated_at", "2016-12-05 22:56:40.652118"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.658029"], ["name", "Mylene MacGyver"], ["updated_at", "2016-12-05 22:56:40.658029"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.661255"], ["name", "Ms. Diana Bogan"], ["updated_at", "2016-12-05 22:56:40.661255"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.666030"], ["name", "Kristy Koepp PhD"], ["updated_at", "2016-12-05 22:56:40.666030"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.668984"], ["name", "Benedict McCullough"], ["updated_at", "2016-12-05 22:56:40.668984"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.671743"], ["name", "Delfina Terry"], ["updated_at", "2016-12-05 22:56:40.671743"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.675140"], ["name", "Finn Heaney"], ["updated_at", "2016-12-05 22:56:40.675140"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.680647"], ["name", "Ernesto Jakubowski"], ["updated_at", "2016-12-05 22:56:40.680647"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.683309"], ["name", "Claudia Waelchi MD"], ["updated_at", "2016-12-05 22:56:40.683309"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.686044"], ["name", "Davin Torphy"], ["updated_at", "2016-12-05 22:56:40.686044"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.688786"], ["name", "Jalen Larson"], ["updated_at", "2016-12-05 22:56:40.688786"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.691937"], ["name", "Mr. Mallie Effertz"], ["updated_at", "2016-12-05 22:56:40.691937"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.694991"], ["name", "Keith White"], ["updated_at", "2016-12-05 22:56:40.694991"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.697848"], ["name", "Miss Westley Hauck"], ["updated_at", "2016-12-05 22:56:40.697848"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.700587"], ["name", "Esmeralda Heathcote"], ["updated_at", "2016-12-05 22:56:40.700587"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.703806"], ["name", "Emilia Bode"], ["updated_at", "2016-12-05 22:56:40.703806"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.707088"], ["name", "Mozell Ebert"], ["updated_at", "2016-12-05 22:56:40.707088"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.715096"], ["name", "Casandra Hermiston Jr."], ["updated_at", "2016-12-05 22:56:40.715096"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.719406"], ["name", "Mariana Green"], ["updated_at", "2016-12-05 22:56:40.719406"]]
+  [1m[35m (4.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.726190"], ["name", "Quinn Yundt"], ["updated_at", "2016-12-05 22:56:40.726190"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.730106"], ["name", "Kelly Beer"], ["updated_at", "2016-12-05 22:56:40.730106"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.735348"], ["name", "Merritt Bernhard"], ["updated_at", "2016-12-05 22:56:40.735348"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.738183"], ["name", "Lucio Waelchi"], ["updated_at", "2016-12-05 22:56:40.738183"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.741081"], ["name", "Novella Green MD"], ["updated_at", "2016-12-05 22:56:40.741081"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.744280"], ["name", "Ms. Bradly Bogisich"], ["updated_at", "2016-12-05 22:56:40.744280"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.747095"], ["name", "Luciano Jenkins"], ["updated_at", "2016-12-05 22:56:40.747095"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.749770"], ["name", "Jack Swaniawski"], ["updated_at", "2016-12-05 22:56:40.749770"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.752411"], ["name", "Leda West"], ["updated_at", "2016-12-05 22:56:40.752411"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.755144"], ["name", "Paxton Hartmann"], ["updated_at", "2016-12-05 22:56:40.755144"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.758022"], ["name", "Jarred Raynor"], ["updated_at", "2016-12-05 22:56:40.758022"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.761024"], ["name", "Rudolph Rosenbaum"], ["updated_at", "2016-12-05 22:56:40.761024"]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.767654"], ["name", "Darrion Kuphal"], ["updated_at", "2016-12-05 22:56:40.767654"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.770814"], ["name", "Linwood O'Conner"], ["updated_at", "2016-12-05 22:56:40.770814"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.774258"], ["name", "Julien Romaguera"], ["updated_at", "2016-12-05 22:56:40.774258"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.777206"], ["name", "Mrs. Rafaela Schmidt"], ["updated_at", "2016-12-05 22:56:40.777206"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.780311"], ["name", "Marquise Watsica"], ["updated_at", "2016-12-05 22:56:40.780311"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.785252"], ["name", "Dr. Betty Goodwin"], ["updated_at", "2016-12-05 22:56:40.785252"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.788690"], ["name", "Marisa Gibson"], ["updated_at", "2016-12-05 22:56:40.788690"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.793076"], ["name", "Kurtis Bins III"], ["updated_at", "2016-12-05 22:56:40.793076"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.797924"], ["name", "Davin Wolf"], ["updated_at", "2016-12-05 22:56:40.797924"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.800678"], ["name", "Abbey Goyette"], ["updated_at", "2016-12-05 22:56:40.800678"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.803740"], ["name", "Sincere Emard"], ["updated_at", "2016-12-05 22:56:40.803740"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.806592"], ["name", "Clara Weber"], ["updated_at", "2016-12-05 22:56:40.806592"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.809956"], ["name", "Amani Heidenreich"], ["updated_at", "2016-12-05 22:56:40.809956"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.812901"], ["name", "Bernard Zulauf Sr."], ["updated_at", "2016-12-05 22:56:40.812901"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.815639"], ["name", "Jerel Sanford"], ["updated_at", "2016-12-05 22:56:40.815639"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.818584"], ["name", "Emerald Langworth"], ["updated_at", "2016-12-05 22:56:40.818584"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.821491"], ["name", "Amara Gulgowski"], ["updated_at", "2016-12-05 22:56:40.821491"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.824299"], ["name", "Sven Fay"], ["updated_at", "2016-12-05 22:56:40.824299"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.833412"], ["name", "Kurt McDermott DVM"], ["updated_at", "2016-12-05 22:56:40.833412"]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.841525"], ["name", "Clyde Spencer DVM"], ["updated_at", "2016-12-05 22:56:40.841525"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.844547"], ["name", "Corbin Luettgen"], ["updated_at", "2016-12-05 22:56:40.844547"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.847187"], ["name", "Amely Kihn"], ["updated_at", "2016-12-05 22:56:40.847187"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.850997"], ["name", "Aiyana Yost"], ["updated_at", "2016-12-05 22:56:40.850997"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.853861"], ["name", "Sunny Jenkins"], ["updated_at", "2016-12-05 22:56:40.853861"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.857249"], ["name", "Jennings Mueller"], ["updated_at", "2016-12-05 22:56:40.857249"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.863376"], ["name", "Leif Durgan"], ["updated_at", "2016-12-05 22:56:40.863376"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.866235"], ["name", "Ms. Alena Klein"], ["updated_at", "2016-12-05 22:56:40.866235"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.869191"], ["name", "Leonora Quigley"], ["updated_at", "2016-12-05 22:56:40.869191"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.871862"], ["name", "Rebecca Koch"], ["updated_at", "2016-12-05 22:56:40.871862"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.874735"], ["name", "Eino Glover DVM"], ["updated_at", "2016-12-05 22:56:40.874735"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.877768"], ["name", "Gillian Luettgen"], ["updated_at", "2016-12-05 22:56:40.877768"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.880721"], ["name", "Johnathon Glover"], ["updated_at", "2016-12-05 22:56:40.880721"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.883462"], ["name", "Mr. Geovanni Quitzon"], ["updated_at", "2016-12-05 22:56:40.883462"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.886023"], ["name", "Makenzie Kling"], ["updated_at", "2016-12-05 22:56:40.886023"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.889436"], ["name", "Rosa Von"], ["updated_at", "2016-12-05 22:56:40.889436"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.893535"], ["name", "Kattie Hessel"], ["updated_at", "2016-12-05 22:56:40.893535"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.896760"], ["name", "Luella Wisozk IV"], ["updated_at", "2016-12-05 22:56:40.896760"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.901124"], ["name", "Sadye Hodkiewicz"], ["updated_at", "2016-12-05 22:56:40.901124"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.905197"], ["name", "Kari Abbott MD"], ["updated_at", "2016-12-05 22:56:40.905197"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.908179"], ["name", "Miss Harmony Keeling"], ["updated_at", "2016-12-05 22:56:40.908179"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.911842"], ["name", "Demarco Koelpin II"], ["updated_at", "2016-12-05 22:56:40.911842"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.916539"], ["name", "Toby Hills DDS"], ["updated_at", "2016-12-05 22:56:40.916539"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.920668"], ["name", "Miss Assunta Huels"], ["updated_at", "2016-12-05 22:56:40.920668"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.923193"], ["name", "Arely Ferry"], ["updated_at", "2016-12-05 22:56:40.923193"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2016-12-05 22:56:40.926419"], ["name", "Richmond Toy"], ["updated_at", "2016-12-05 22:56:40.926419"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 22:56:40.929420"], ["name", "Miss Tania Feeney"], ["updated_at", "2016-12-05 22:56:40.929420"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mPerson Load (1.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 16:59:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 25ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 16:59:49 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:01:52 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:02:33 -0600
+
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:02:43 -0600
+Processing by PersonsController#index as HTML
+  [1m[35mPerson Load (1.0ms)[0m  SELECT "people".* FROM "people"
+Completed 200 OK in 50ms (Views: 42.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:09:27 -0600
+
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:09:42 -0600
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:10:35 -0600
+Processing by PersonsController#index as HTML
+  [1m[36mPerson Load (2.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+Completed 200 OK in 32ms (Views: 25.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-05 17:10:44 -0600
+Processing by PersonsController#new as HTML
+  Rendered persons/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 622ms (Views: 621.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:10:45 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:10:45 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:10:45 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:10:45 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:10:45 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:10:45 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:10:45 -0600
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-05 17:11:12 -0600
+Processing by PersonsController#new as HTML
+  Rendered persons/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:11:12 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:11:12 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:11:12 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:11:12 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:11:12 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:11:12 -0600
+
+
+Started GET "/users/create" for 127.0.0.1 at 2016-12-05 17:13:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/create"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.0ms)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2016-12-05 17:14:10 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/create"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.1ms)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2016-12-05 17:15:13 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/create"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:15:29 -0600
+Processing by PersonsController#index as HTML
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:15:52 -0600
+Processing by PersonsController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2016-12-05 17:16:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/create"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.1ms)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2016-12-05 17:16:27 -0600
+Processing by PersonsController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 23:16:28.205172"], ["name", "Ms. Alexis Wolff"], ["updated_at", "2016-12-05 23:16:28.205172"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 490ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:16:28 -0600
+Processing by PersonsController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2016-12-05 17:16:39 -0600
+Processing by PersonsController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2016-12-05 23:16:39.730628"], ["name", "Marcia Runolfsdottir"], ["updated_at", "2016-12-05 23:16:39.730628"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:16:39 -0600
+Processing by PersonsController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2016-12-05 17:21:07 -0600
+
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  config/routes.rb:5:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2016-12-05 17:21:21 -0600
+
+SyntaxError (/Users/francisco/OneDrive/Programming/CodingDojo/Programming/ROR/rails/user/app/controllers/persons_controller.rb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/persons_controller.rb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2016-12-05 17:21:30 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/100" for 127.0.0.1 at 2016-12-05 17:21:35 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 100]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:26:07 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/100/edit"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.6ms)
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+Processing by PersonsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 100]]
+  Rendered persons/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:26:54 -0600
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+Processing by PersonsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 100]]
+  Rendered persons/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:27:26 -0600
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:28:41 -0600
+
+SyntaxError (/Users/francisco/OneDrive/Programming/CodingDojo/Programming/ROR/rails/user/app/controllers/persons_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+		 @person = jason: Person.find(params[:id])
+		                 ^):
+  app/controllers/persons_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.5ms)
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:29:13 -0600
+
+SyntaxError (/Users/francisco/OneDrive/Programming/CodingDojo/Programming/ROR/rails/user/app/controllers/persons_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+		 @person = :jason => Person.find(params[:id])
+		                    ^):
+  app/controllers/persons_controller.rb:16: syntax error, unexpected =>, expecting keyword_end
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.9ms)
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+Processing by PersonsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 100]]
+  Rendered persons/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 50.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:29:30 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:32:01 -0600
+Processing by PersonsController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+Processing by PersonsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 100]]
+  Rendered persons/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:12 -0600
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+Processing by PersonsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 100]]
+  Rendered persons/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:32:54 -0600
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+Processing by PersonsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 100]]
+  Rendered persons/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 89ms (Views: 82.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:33:08 -0600
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "people"[0m
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:36:24 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.0ms)
+
+
+Started GET "/users/show" for 127.0.0.1 at 2016-12-05 17:37:31 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=show):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.2ms)
+
+
+Started GET "/users/show" for 127.0.0.1 at 2016-12-05 17:37:35 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=show):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.4ms)
+
+
+Started GET "/users/1/show" for 127.0.0.1 at 2016-12-05 17:38:01 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/1/show"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.6ms)
+
+
+Started GET "/users/1/show" for 127.0.0.1 at 2016-12-05 17:38:49 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/1/show"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.8ms)
+
+
+Started GET "/users/1/show" for 127.0.0.1 at 2016-12-05 17:39:01 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/1/show"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+
+
+Started GET "/users/1/show" for 127.0.0.1 at 2016-12-05 17:39:40 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/1/show"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.8ms)
+
+
+Started GET "/users/1/show" for 127.0.0.1 at 2016-12-05 17:39:42 -0600
+
+ActionController::RoutingError (No route matches [GET] "/users/1/show"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:39:52 -0600
+Processing by PersonsController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-05 17:40:11 -0600
+Processing by PersonsController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/100/edit" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+Processing by PersonsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 100]]
+  Rendered persons/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-05 17:40:25 -0600
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-12-05 17:40:30 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/total" for 127.0.0.1 at 2016-12-05 17:40:50 -0600
+
+ActionController::RoutingError (No route matches [GET] "/user/total"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.4ms)
+
+
+Started GET "/user/total" for 127.0.0.1 at 2016-12-05 17:41:52 -0600
+
+ActionController::RoutingError (No route matches [GET] "/user/total"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.5ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:42:10 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.9ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:42:25 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.7ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:42:43 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.2ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:43:29 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.5ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:43:31 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.1ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:43:36 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.0ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:44:57 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"total"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=total):
+  app/controllers/persons_controller.rb:13:in `show'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.4ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:45:15 -0600
+Processing by PersonsController#counter as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "people"[0m
+Completed 500 Internal Server Error in 19ms
+
+ActionView::MissingTemplate (Missing template persons/counter, application/counter with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/francisco/OneDrive/Programming/CodingDojo/Programming/ROR/rails/user/app/views"
+):
+  actionview (4.1.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.8) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.8) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.8) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.8) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:45:18 -0600
+Processing by PersonsController#counter as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "people"
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template persons/counter, application/counter with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/francisco/OneDrive/Programming/CodingDojo/Programming/ROR/rails/user/app/views"
+):
+  actionview (4.1.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.8) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.8) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.8) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.8) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:45:41 -0600
+Processing by PersonsController#counter as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "people"[0m
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template persons/counter, application/counter with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/francisco/OneDrive/Programming/CodingDojo/Programming/ROR/rails/user/app/views"
+):
+  actionview (4.1.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.8) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.8) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.8) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.8) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/francisco/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/francisco/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/users/total" for 127.0.0.1 at 2016-12-05 17:46:00 -0600
+Processing by PersonsController#counter as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "people"
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-12-05 17:46:07 -0600
+Processing by PersonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.2ms)
