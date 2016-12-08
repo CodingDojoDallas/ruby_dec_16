@@ -1,0 +1,36 @@
+5.times{User.create(fname: Faker::Name.first_name, lname: Faker::Name.last_name)}
+
+5.times{Blog.create(name: Faker::StarWars.character, description: Faker::StarWars.quote)}
+
+3.times{User.find(1).posts.create(title: Faker::ChuckNorris.fact, content: Faker::Lorem.sentence)}
+
+User.find(2).posts.create(title: Faker::ChuckNorris.fact, content: Faker::Lorem.sentence)
+
+3.times{Owner.create(user: User.find(1), blog:Blog.find(1))}
+
+Owner.create(user: User.find(2), blog:Blog.find(2))
+Owner.create(user: User.find(5), blog:Blog.find(5))
+
+20.times{User.find(3).posts.create(title: Faker::StarWars.quote, content: Faker::Lorem.sentence, blog: Blog.find(rand(1..7)))}
+
+2.times{User.find(3).messages.create(author: Faker::StarWars.character, post: Post.find(1), message: Faker::Lorem.sentence)}
+
+3.times{User.find(3).messages.create(author: Faker::StarWars.character, post: Post.find(2), message: Faker::Lorem.sentence)}
+
+3.times{User.find(4).messages.create(author: Faker::StarWars.character, post: Post.last, message: Faker::Lorem.sentence)}
+
+Owner.update(2, user: User.last)
+
+Post.update(2, content: Faker::StarWars.quote)
+
+User.find(3).blogs
+
+User.third.posts
+
+User.third.messages
+
+Blog.first.posts.joins(:user).select('*')
+
+Blog.first.messages.joins(:user).select('*') 
+
+Owner.update(1, user: User.last)
