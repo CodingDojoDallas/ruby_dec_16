@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<style>
+			h3{
+				padding: 3%;
+			}
+			h3 span{
+				padding:2%;
+				border: solid 1px;
+				border-radius: 50px;
+				
+			}
+			.col-sm-3{
+				border: solid 1px;
+				text-align: center;
+				height: 125px;
+				
+			}
+			label{
+				padding: 1%;
+			}
+			.col-sm-6{
+				margin-top: 30px;
+				height: 200px;
+				border: solid 1px;
+				border-radius: 10px;
+				overflow: scroll;
+				
+			}
+	</style>
+	<meta charset="UTF-8">
+	<title>Gold</title>
+</head>
+<body>
+	<div class="container">
+		<h3>Your Gold: <span><%= session[:gold]%></span></h3>
+		<div class="row">
+			<form action="rpgs/farm" method="post" class="col-sm-3">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<label>Farm</label>
+				<p>(Earns 10-20 golds)</p>
+				<button class ="btn btn-warning btn-sm" type="submit">Find Gold!</button>
+			</form>
+			<form action="rpgs/cave" method="post" class="col-sm-3">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<label>Cave</label>
+				<p>(Earns 5-10 golds)</p>
+				<button class ="btn btn-warning btn-sm" type="submit">Find Gold!</button>
+			</form>
+			<form action="rpgs/house" method="post" class="col-sm-3">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<label>House</label>
+				<p>(Earns 2-5 golds)</p>
+				<button class ="btn btn-warning btn-sm" type="submit">Find Gold!</button>
+			</form>
+			<form action="rpgs/casino" method="post" class="col-sm-3">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<label>Casino</label>
+				<p>(Earns or takes up to 50 golds)</p>
+				<button class ="btn btn-warning btn-sm" type="submit">Find Gold!</button>
+
+			</form>
+			<div class="col-sm-6">
+			<% session[:message].each do |m|%>
+				<p class="<%=session[:class]%>"><%= m %></p>
+				<% end %>
+			</div>
+			<br>
+			<a href="/rpgs/clear">Reset</a>
+		</div>
+	</div>
+</body>
+</html>

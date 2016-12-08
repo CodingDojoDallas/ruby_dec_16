@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<h1>Coding Dojo Survey</h1>
+<div class="container">
+	<form action="/surveys/create" class="form-horizontal" method="post">
+	 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<div class="form-group">
+		<label for="name">Your Name: </label>
+		<input type="text" name="survey[name]" id="name" class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="location">Location: </label>
+	<select name="survey[location]" class="form-control" id="location">
+		<option value="San Francisco">San Francisco</option>
+		<option value="Seattle">Seattle</option>
+		<option value="Dallas">Dallas</option>
+		<option value="Sillicon Valley">Sillicon Valley</option>
+	</select> 
+		</div>
+		<div class="form-group">
+	<label for="language">Language: </label>
+	<select name="survey[language]" class="form-control" id="language">
+		<option value="MEAN">MEAN</option>
+		<option value="Python">Python</option>
+		<option value="Ruby on Rails">Ruby on Rails</option>
+		<option value="Swift">Swift</option>
+	</select>
+		</div>
+	<div class="form-group">
+	<label for="comment">Comment</label>
+		<textarea name="survey[comment]" rows="3" id="comment" class="form-control"></textarea></div>
+	<div class="form-group">
+	<button type="submit" class="btn btn-info">Submit</button>
+		</div>
+	</form>
+	
+</div>
+</body>
+</html>
