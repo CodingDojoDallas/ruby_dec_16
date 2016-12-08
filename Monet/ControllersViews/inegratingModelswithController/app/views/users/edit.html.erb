@@ -1,0 +1,8 @@
+<form action="/users/<%=session[:id]%>" method="post">
+	<input name="_method" type="hidden" value="put">
+
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type="text" name="name" value="<%=session[:name] %>">
+	<input type="submit" value="Edit/Update">
+
+</form>
