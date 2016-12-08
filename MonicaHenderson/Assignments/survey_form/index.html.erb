@@ -1,0 +1,29 @@
+<form  action="/result" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <div >
+    Your Name: <input type="text" name="survey[name]">
+  </div>
+
+  <div class>
+  <label>Dojo Location:</label>
+    <select name="survey[location]">
+      <% @locations.each do |loc| %>
+        <option><%= loc %></option>
+      <% end %>
+    </select>
+
+      <!--  <option value="DC">DC /option> -->
+  <label>Favorite Language:</label>
+    <select name="survey[language]">
+      <% @languages.each do |lang| %>
+        <option><%= lang %></option>
+      <% end %>
+    </select>
+</div>
+
+<div class>
+  Comment (optional): <textarea name="survey[comment]" rows="8" cols="30"></textarea>
+</div>
+  <input type="submit" value="Submit">
+
+</form>
