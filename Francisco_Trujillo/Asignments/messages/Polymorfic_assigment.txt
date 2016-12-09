@@ -1,0 +1,24 @@
+Miragtion file
+	class CreateComments < ActiveRecord::Migration
+		def change
+			create_table :comments do |t|
+			t.string :comment
+			t.references :commentary, polymorphic: true, index:true
+
+			t.timestamps
+    		end
+  		end
+	end
+
+added line to user.rb, post.rb, message.rb, blog.rb
+has_many :comments, as: :commentary
+
+User.first.comments.create(comment: 'This is my first message')
+Post.find(2).comments.create(comment: Faker::Lorem.sentence)
+Message.find(4).comments.create(comment: Faker::Lorem.sentence)
+Blogs.first.comments.create(comment: 'This is my first message')
+
+User.find(1).comments.update(1, comment: "message has been updated")
+
+User.find(1).comments
+Comment.find(4).destroy
