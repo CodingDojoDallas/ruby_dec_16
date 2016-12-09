@@ -1,0 +1,17 @@
+<h1>Register</h1>
+<ul>
+  <% flash.each do |key, value| %>
+    <% value.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+</ul>
+<form action='/users' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  Name: <input type="text" name="user[name]" placeholder="Name"/></br>
+  Email: <input type="email" name="user[email]" placeholder="Email"/></br>
+  Password: <input type="password" name="user[password]" placeholder="Password" /></br>
+  Password Confirmation: <input type="password" name="user[password_confirmation]" placeholder="Password Confirmation" /></br>
+  <button type='submit'>Join</button>
+</form>
+<a href="/">Back</a>
