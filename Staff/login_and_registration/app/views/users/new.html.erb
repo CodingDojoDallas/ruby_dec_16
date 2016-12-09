@@ -1,0 +1,31 @@
+<div>
+	<form action="/users" method="post">
+		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+		<div>
+			<label>Name</label>
+			<input type="text" name="user[name]">
+		</div>
+		<div>
+			<label>Email</label>
+			<input type="text" name="user[email]">
+		</div>
+		<div>
+			<label>Password</label>
+			<input type="password" name="user[password]">
+		</div>
+		<div>
+			<label>Confirm Password</label>
+			<input type="password" name="user[password_confirmation]">
+		</div>
+		<div>
+			<input type="submit" value="Register">
+		</div>
+	</form>
+</div>
+
+
+
+
+
+
+
