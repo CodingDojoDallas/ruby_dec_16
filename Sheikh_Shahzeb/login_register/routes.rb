@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	get '/' => 'users#index'
-	post 'users' => 'users#create'
-	get 'dashboard' => 'users#dashboard'
+	resources :users, :sessions
+	root 'users#new'
+	get '/dashboard' => 'users#logged_in'
 end
