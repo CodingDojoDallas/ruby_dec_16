@@ -1,0 +1,16 @@
+<h1>Update <%=@user.first_name%> <%=@user.last_name%>'s info</h1>
+<ul>
+  <% flash.each do |key, value| %>
+    <% value.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+</ul>
+<form action='/users/<%=@user.id%>/edit' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="text" name="user[first_name]" value="<%= @user.first_name %>" />
+  <input type="text" name="user[last_name]" value="<%= @user.last_name %>"/>
+  <input type="email" name="user[email_address]" value="<%= @user.email_address %>" />
+  <input type='submit' value='update'>
+</form>
+<a href="/users/<%=@user.id%>">Show</a> | <a href="/">Back</a>
