@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+
+<h1>Gold</h1>
+<p></p>
+
+<!-- Total gold earned or lost at this point -->
+
+<p>Your Gold: </p>
+<div id="total_gold">
+	<p><%= session[:gold] %></p>
+</div>
+
+<div id="areas_to_get_gold">
+	<div class="place">
+		<h3>Farm</h3>
+		<p>(earns 10 - 20 golds)</p>
+		<form action="/golds/gold_processing" method="post">
+			<input name="authenticity_token" value = "<%form_authenticity_token %>" type="hidden">
+			<input type="hidden" name="building" value="Farm">
+			<input type="submit" value="Find Gold!">
+		</form>
+	</div>
+	<div class="place">
+		<h3>Cave</h3>
+		<p>(earns 5 - 10 golds)</p>
+		<form action="/golds/gold_processing" method="post">
+			<input name="authenticity_token" value = "<%form_authenticity_token %>" type="hidden">
+			<input type="hidden" name="building" value="Cave">
+			<input type="submit" value="Find Gold!">
+		</form>
+	</div>
+	<div class="place">
+		<h3>House</h3>
+		<p>(earns 2 - 5 golds)</p>
+		<form action="/golds/gold_processing" method="post">
+			<input name="authenticity_token" value = "<%form_authenticity_token %>" type="hidden">
+			<input type="hidden" name="building" value="House">
+			<input type="submit" value="Find Gold!">
+		</form>
+	</div>
+	<div class="place">
+		<h3>Casino</h3>
+		<p>(earns/takes 0 - 50 golds)</p>
+		<form action="/golds/gold_processing" method="post">
+			<input name="authenticity_token" value = "<%form_authenticity_token %>" type="hidden">
+			<input type="hidden" name="building" value="Casino">
+			<input type="submit" value="Find Gold!">
+		</form>
+	</div>
+
+
+</div>
+<div>
+	<p>Activities: </p>
+	<p>
+		<% session[:play].reverse.each do |p| %>
+			<% if p.to_int >= 0 %>
+				<p class="green">Earned <%= p %> golds</p>
+			<% else %>
+				<p class="red">Lost <%= p %> gold</p>
+			<% end %>
+			
+		<% end %>
+
+
+	</p>
+</div>
+
+</body>
+</html>

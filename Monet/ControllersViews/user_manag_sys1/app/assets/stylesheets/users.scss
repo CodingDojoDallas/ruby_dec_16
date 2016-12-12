@@ -1,0 +1,22 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table{
+	border: 2px solid black;
+}
+
+tr{
+	padding:0px;
+	margin:0px;
+}
+tr th{
+	border-right: 1px solid black;
+	padding: 0px 15px;
+	text-align:left;
+}
+tr td{
+	border-right: 1px solid black;
+	padding: 0px 15px;
+	text-align:left;
+}
