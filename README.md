@@ -39,6 +39,18 @@ Blogs/Posts/Messages II - https://youtu.be/ezDWz9IFmi0
 
 Intro to Controllers - https://youtu.be/i2T9H-G3Stg
 
+EDD w/ Survey Form - https://www.youtube.com/watch?v=bKlROqXD7pQ&feature=youtu.be
+
+Controllers - Helpers - https://youtu.be/xR6ALa8RfXo
+
+Controllers - Form Helpers and Paths - https://youtu.be/9vTfOrEm-L0
+
+Products Dashboard - https://youtu.be/V9Gr7IKjui4
+
+Login/Registration w/ Bcrypt - https://youtu.be/wgGeVPQ1krI
+
+Belt Review - https://youtu.be/YbprvnaeCP0
+
 ## Resources
 
 http://guides.rubyonrails.org/index.html
