@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<% if @product %>
+ 		Name: <%= @product.name %>
+ 		Description: <%= @product.description %>
+ 		Price: <%= @product.price %>
+ 		Category:<%= @product.category.name %>
+
+ 		<%= link_to 'Edit', edit_product_path(@product) %>
+
+ 		<form action='/comments/<%= @product.id %>' method='post'>
+ 		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+ 		<input type='hidden' name='comment[product_id]' value='<%= @product.id %>'>
+ 			<h2>Comments</h2>
+ 			<input type='text' name='comment[content]'>
+ 			<input type='submit' value='leave a comment'>
+ 		</form>
+
+ 		<% @product.comments.each do |comment|   %>
+ 			<p><%= comment.content %> </p><br>
+ 		<% end %>
+ 		
+ 	<% end %>
+
+ 	<%= link_to 'Back', :back %>
+</body>
+</html>
