@@ -1,0 +1,38 @@
+<style>
+
+</style>
+
+<h1>Welcome back <%=@user.name%></h1>
+
+<h3>Add a New Secret</h3>
+<ul>
+  <% flash.each do |key, value| %>
+    <% value.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<form action='/secrets' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <textarea name="secret[content]" placeholder="New Secret"></textarea><br/>
+  <button type='submit'>Create Secret</button>
+</form>
+
+<% @user.secrets.each do |s| %>
+<p><%= s.content %></p>
+<p><%= s.likes.count %> likes</p>
+<form action='/likes' method='post'>
+  <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+  <input type='hidden' name='secret_id' value='<%= s.id %>'>
+  <input type='submit' value='Like'>
+</form>
+<form action='/secrets/<%= s.id %>' method='post'>
+  <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+  <input type='hidden' name='_method' value='delete'>
+  <input type='submit' value='Delete'>
+</form>
+<% end %>
+
+
+<%= link_to "Edit Profile", "/users/#{@user.id}/edit" %>

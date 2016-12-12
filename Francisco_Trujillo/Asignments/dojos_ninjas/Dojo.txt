@@ -1,0 +1,36 @@
+
+
+dojo1 = Dojo.new(name:"CodingDojo Sillicon Valley", city:"Mountain View", state:"CA")
+
+dojo1.save
+
+1.upto(20){|i| Ninja.create(fname: Faker::Name.first_name, lname:Faker::Name.last_name)}
+
+adding validation to Dojos
+		class Dojo < ActiveRecord::Base
+		validate :name, :city, :state, presence: true
+		validate state:, length: {is: 2}
+		before_save do
+			self.name.capitalize!
+			self.city.capitalize!
+			self.state.upcase!
+		end
+	end
+	
+adding validation to Ninjas
+	class Ninja < ActiveRecord::Base
+		validate :fname, :lname, presence: true
+		belongs_to :dojo
+		before_save do
+			self.fname.capitalize!
+			self.lname.capitalize!
+		end
+	end
+Ninja.update(1, dojo_id:5)
+
+1.upto(3){|i| Dojo.find(i).destroy}
+
+Ninja.first.dojo
+Dojo.first.ninja
+
+dependent: :destroy

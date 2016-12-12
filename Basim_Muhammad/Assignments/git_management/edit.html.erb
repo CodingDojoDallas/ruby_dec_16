@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Editing Page
+	<% if @user %>
+	<form action='/users/<%= @user.id %>' method='post'>
+	 <input type="hidden"name="_method"value="put">
+	 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		First Name<input type='text' name='user[first_name]'>
+		Last Name<input type='text' name='user[last_name]'>
+		Email<input type='text' name='user[email]'>
+		Password<input type='text' name='user[password]'>
+		<input type='submit' value='update'>
+	</form>
+	<% end %>
+</body>
+</html>

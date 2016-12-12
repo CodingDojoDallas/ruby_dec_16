@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Form Test Show</title>
+    <style>
+      #info {
+        width:500px;
+        padding:15px;
+        margin: 30px auto;
+        background-color:lightgrey;
+        font-family: sans-serif;
+        position: relative;
+      }
+
+      h3{
+        background-color: green;
+        color:white;
+        text-align: center;
+      }
+
+      h2{
+        text-decoration: underline;
+      }
+
+      td{
+        padding: 5px;
+      }
+
+      button{
+        padding:5px;
+        border:2px solid #ccc;
+        -webkit-border-radius: 5px;
+        background-color: black;
+        color:white;
+        border-radius: 5px;
+        display:block;
+        position:absolute;
+        bottom: 15px;
+        right:15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Thanks for submitting this form! You have submitted
+        this form <%=session[:submit]%> time(s) now!</h3>
+    <div id="info">
+      <h2>Submitted Info</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td><%=session[:user]["name"]%></td>
+            </tr>
+            <tr>
+              <td>Dojo Location:</td>
+              <td><%=session[:user]['location']%></td>
+            </tr>
+            <tr>
+              <td>Favorite Language:</td>
+              <td><%=session[:user]['language']%>!!!</td>
+            </tr>
+            <tr>
+              <td>Comment:</td>
+              <td><%=session[:user]['comment']%></td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="/"><button>Go Back</button></a>
+      </form>
+    </div>
+  </body>
+</html>

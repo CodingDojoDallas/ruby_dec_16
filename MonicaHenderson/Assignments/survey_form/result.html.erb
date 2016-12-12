@@ -1,0 +1,25 @@
+
+<div>
+  <h6>Thanks for submitting this form! You have submitted this form <%=pluralize(@counter, 'time')%> now.</h6>
+
+</div>
+<div>
+<table>
+  <tr>
+    <th>Your Name:</th>
+    <td><%= session[:form_data]['name'] %></td>
+  </tr>
+  <tr>
+    <th>Dojo Location:</th>
+    <td><%= session[:form_data]['location'] %></td>
+  </tr>
+  <tr>
+    <th>Favorite Language:</th>
+    <td><%= session[:form_data]['language'] %></td>
+  </tr>
+  <tr>
+    <th>Comment:</th>
+    <td><%= session[:form_data]['comment'] %></td>
+  </tr>
+</table>
+</div>

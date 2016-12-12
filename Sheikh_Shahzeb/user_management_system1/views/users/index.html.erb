@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+</head>
+<body>
+	<h1>Listing Users</h1>
+	<table border="1">
+		<tr>
+			<th>first name</th>
+			<th>last name</th>
+			<th>Email</th>
+		</tr>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%=user.first_name%></td>
+			<td><%=user.last_name%></td>
+			<td><%=user.email_address%></td>
+		</tr>
+		<%end%>
+	</table>
+</body>
+</html>
