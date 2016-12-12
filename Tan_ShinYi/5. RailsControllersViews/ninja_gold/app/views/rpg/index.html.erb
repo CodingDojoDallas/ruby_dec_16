@@ -1,0 +1,39 @@
+
+    <h3> Your Gold:</h3><div id="gold"><%=session[:gold]%></div>
+    <div id="wrapper">
+      <form class="location" action="/rpg/farm" method="post">
+        <h2>Farm</h2>
+        <p>(earns 10-20 golds)</p>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>" >
+        <input type="submit" value="Find Gold!">
+      </form>
+      <form class="location" action="/rpg/cave" method="post">
+        <h2>Cave</h2>
+        <p>(earns 5-10 golds)</p>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>" >
+        <input type="submit" value="Find Gold!">
+      </form>
+      <form class="location" action="/rpg/house" method="post">
+        <h2>House</h2>
+        <p>(earns 2-5 golds)</p>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>" >
+        <input type="submit" value="Find Gold!">
+      </form>
+      <form class="location" action="/rpg/casino" method="post">
+        <h2>Casino</h2>
+        <p>(earns/takes 0-50 golds)</p>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>" >
+        <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+
+    <h4>Activity:</h4>
+    <div id="activity">
+      <% session[:activities].each  do |i| %>
+        <% if i.include? "Entered" %>
+          <p class="red"><%=i%></p>
+        <% else %>
+        <p class="green"><%=i%></p>
+        <% end %>
+      <% end %>
+    </div>

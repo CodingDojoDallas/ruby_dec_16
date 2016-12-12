@@ -1,0 +1,80 @@
+<html>
+    <head>
+       <title>Dojo Survey Index</title>
+       <style>
+         #getinfo {
+            width:500px;
+            padding:15px;
+            margin: 30px auto;
+            background-color:lightgrey;
+            font-family: sans-serif;
+            position: relative;
+          }
+
+          td{
+            padding: 5px;
+          }
+
+          textarea{
+            width: 400px;
+            display:block;
+            margin-bottom: 40px;
+          }
+
+          input[type=submit]{
+            padding:5px;
+            border:2px solid #ccc;
+            -webkit-border-radius: 5px;
+            background-color: black;
+            color:white;
+            border-radius: 5px;
+            display:block;
+            position:absolute;
+            bottom: 15px;
+            right:15px;
+          }
+        </style>
+    </head>
+    <body>
+      <div id="getinfo">
+        <form action='/surveys' method='post' id='userform'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <table>
+            <tbody>
+              <tr>
+                <td>Your Name:</td>
+                <td><input type='text' name='survey[name]' value="<%=session[:name]%>"></td>
+              </tr>
+              <tr>
+                <td>Dojo Location:</td>
+                <td>
+                  <select name="survey[location]">
+                    <option value="siliconvalley">Silicon Valley</option>
+                    <option value="seattle">Seattle</option>
+                    <option value="la">Los Angeles</option>
+                    <option value="dallas">Dallas</option>
+                    <option value="dc">Washington DC</option>
+                    <option value="chicago">Chicago</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Favorite Language:</td>
+                <td>
+                  <select name="survey[language]">
+                    <option value="python">Python</option>
+                    <option value="php">PHP</option>
+                    <option value="c++">C++</option>
+                    <option value="c#">C#</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Comment (120 characters max) :</p>
+          <textarea name="survey[comment]" id='userform'><%=session[:comment]%></textarea>
+          <input type='submit' value='create user'>
+        </form>
+      </div>
+    </body>
+</html>
