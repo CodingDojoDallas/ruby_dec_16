@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<% if session[:gold] %>
+			<p>Your total gold is <%= session[:gold] %> </p>
+		<% end %>
+		<form action='/farm' method='post'>
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<h2>Farm</h2>
+			<h3>earns 10-20 gold</h3>
+			<input type='submit' value='button'>
+		</form>
+
+		<form action='/cave' method='post'>
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<h2>Cave</h2>
+			<h3>earns 5-10 gold</h3>
+			<input type='submit' value='button'>
+		</form>
+
+		<form action='/house' method='post'>
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<h2>House</h2>
+			<h3>earns 2-5 gold</h3>
+			<input type='submit' value='button'>
+		</form>
+
+		<form action='/casino' method='post'>
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<h2>Casino</h2>
+			<h3>earns 0-50 gold</h3>
+			<input type='submit' value='button'>
+		</form>
+
+		<% session[:activities].each do |activity| %>
+			<p>You earned <%= activity %> this round. </p>
+		<% end %>
+	</body>
+</html>
