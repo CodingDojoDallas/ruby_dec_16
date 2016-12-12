@@ -1,0 +1,21 @@
+<h1>Edit Your Profile</h1>
+<ul>
+  <% flash.each do |key, value| %>
+    <% value.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+</ul>
+<form action='/users/<%=@user.id%>' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  Email: <input placeholder="Email" type="email" name="user[email]" value="<%=@user.email%>"  /></br>
+  Name: <input placeholder="Name" type="text" name="user[name]" value="<%=@user.name%>" /></br>
+  <button type='submit'>Update</button>
+</form>
+<%= link_to "Back", :back %>
+
+<form action="/users/<%=@user.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <button type="submit">Delete Account</button>
+</form>
