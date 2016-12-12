@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Form</title>
+</head>
+<body>
+	<h1>New User</h1>
+	<form action="/users" method="POST">
+   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<label>first name</label>
+			<input type="name" name="first_name">
+		<label>last name</label>
+			<input type="name" name="last_name">
+		<label>Email</label>
+			<input type="email" name="email_address">
+		<label>Password</label>
+			<input type="password" name="password">
+		<input type="submit" value="create">
+	</form>
+	<a href="/">Back</a>
+</body>
+</html>

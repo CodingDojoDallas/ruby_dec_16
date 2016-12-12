@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User Page</title>
+</head>
+<body>
+	<h3>Edit User</h3>
+	<form action="/users/<%=@user.id%>" method="POST">
+		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+		<input type="hidden" name="_method" value="patch">
+		<label>First name:</label>
+			<input type="name" name="first_name" value="<%=@user.first_name%>">
+		<label>Last name:</label>
+			<input type="name" name="last_name" value="<%=@user.last_name%>">
+		<label>Email:</label>
+			<input type="email" name="email_address" value="<%=@user.email_address%>">
+		<label>Password</label>
+			<input type="Password" name="password" value="<%=@user.password%>">
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>
