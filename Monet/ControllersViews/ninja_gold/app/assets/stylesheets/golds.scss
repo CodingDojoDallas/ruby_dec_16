@@ -1,0 +1,22 @@
+// Place all the styles related to the golds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#areas_to_get_gold{
+	display: block;
+	width: 820px;
+}
+.place{
+	display: inline-block;
+	border: 1px solid black;
+	margin: 5px;
+	width: 175px;
+	padding: 5px;
+}
+.green{
+	color: green;
+}
+.red{
+	color: red;
+}

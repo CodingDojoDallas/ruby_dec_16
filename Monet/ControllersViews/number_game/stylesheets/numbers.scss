@@ -1,0 +1,35 @@
+// Place all the styles related to the numbers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div{
+	width: 200px;
+	height: 120px;
+	padding: 10px;
+	text-align:center;
+	margin: 20px;
+}
+
+#red{
+	background: red;
+	color: white;
+}
+
+#green{
+text-align:center;
+	background: green;
+	color: white;
+}
+
+#green a{
+	display: block;
+	padding: 10px;
+	margin: 10px auto;
+	border: 1px solid black;
+	color: black;
+	background: white;
+	text-decoration: none;
+	width:80px;
+	text-align: center;
+
+}
