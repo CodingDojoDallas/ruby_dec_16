@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :events_attending, through: :event_rosters, source: :event
   #line 9 gets the events a user is HOSTING
   has_many :events, dependent: :destroy
+  validates :first_name, presence: true
 end
