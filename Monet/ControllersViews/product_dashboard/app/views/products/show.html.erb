@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+	<h2>Show <%= @product.name %></h2>
+<div id="show_table">
+	<table>
+		<tr>
+			<th>Name</th>
+			<td><%= @product.name  %></td>
+		</tr>
+		<tr>
+			<th>Description</th>
+			<td><%= @product.description  %></td>
+		</tr>
+		<tr>
+			<th>Price</th>
+			<td>$<%= @product.pricing  %></td>
+		</tr>
+	</table>
+</div>
+<a href="/products/<%= @product.id  %>/edit">Edit</a>
+<span> | </span>
+<a href="/products">Back</a>
+
+</body>
+</html>

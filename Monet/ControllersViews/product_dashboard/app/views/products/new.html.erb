@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="/products" method="post">
+		<input type="hidden" name="authenticity_token" value= "<%=form_authenticity_token %>">
+		<label for="name">Name</label>
+		<input type="text" name="product[name]">
+		<label for="description">Description</label>
+		<input type="text" name="product[description]">
+		<label for="pricing">Price</label>
+		<input type="text" name="product[pricing]">
+		<input type="submit" value="Create New Product">
+	</form>
+	<%= link_to 'Back', :back %>
+	<!-- <a href="/products">Back</a> -->
+	<p class="red"> <%= flash[:error] %> </p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2><%= @product.name %></h2>
+
+	<form action="/products/<%= @product.id %>" method="post">
+		<input type="hidden" name="_method" value="patch">
+		<input type="hidden" name="authenticity_token" value= "<%=form_authenticity_token %>">
+		<label for="name">Name</label>
+		<input type="text" name="product[name]" value= "<%= @product.name %>">
+		<label for="description">Description</label>
+		<input type="text" name="product[description]" value= "<%= @product.description %>">
+		<label for="pricing">Price</label>
+		$<input type="text" name="product[pricing]" value= "<%= @product.pricing %>">
+		<input type="submit" value="Edit Product">
+	</form>
+	<%= link_to 'Back', :back %>
+	<!-- <a href="/products">Back</a> -->
+	<p class="red"> <%= flash[:errors] %> </p>
+
+</body>
+</html>
