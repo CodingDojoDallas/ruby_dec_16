@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
 
   validates :email, :presence => true, :format => { :with => email_regex }, :uniqueness => { :case_sensitive => false }
 
-  validates :password, :presence => true
+  validates :password, :presence => true, if: :password_digest_changed?
 end
