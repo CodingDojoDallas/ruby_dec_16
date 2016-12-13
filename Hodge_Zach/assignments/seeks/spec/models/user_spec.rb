@@ -4,6 +4,7 @@ RSpec.describe User, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 
   require 'rails_helper'
+ end
 
   RSpec.describe User do
       it 'requires a name' do
@@ -60,4 +61,3 @@ RSpec.describe User, type: :model do
           expect.(user.password_digest.present?).to eq(true)
       end
   end
-end
