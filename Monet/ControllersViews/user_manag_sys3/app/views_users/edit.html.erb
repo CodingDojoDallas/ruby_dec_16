@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Editing User</h2>
+
+	<form action="/users/<%= @user.id %>" method="post">
+		<input name="_method" type="hidden" value="put">
+		 <input type="hidden" name="authenticity_token" value= "<%=form_authenticity_token %>">
+		<input type="text" name="user[first_name]" value="<%= @user.first_name %>">
+		<input type="text" name="user[last_name]" value="<%= @user.last_name %>">
+		<input type="text" name="user[email_address]" value="<%= @user.email_address %>">
+		<input type="password" name="user[password]" value="<%= @user.password %>">
+		<input type="submit" value="Update">
+	</form>
+
+	<%= flash[:errors] %>
+
+	<p><a href="/users/<%= @user.id%>">Show</a> | <a href="/users">Back</a></p>
+
+
+
+</body>
+</html>

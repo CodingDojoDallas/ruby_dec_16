@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>User</h2>
+	<p>First name: <%= @user.first_name %></p>
+	<p>Last name: <%= @user.last_name %></p>
+	<p>Email: <%= @user.email_address %></p>
+	
+<p>
+	<a href="/users/<%= params[:id] %>/edit">Edit</a> | 
+	<a href="/users">Back</a>
+</p>
+
+</body>
+</html>
