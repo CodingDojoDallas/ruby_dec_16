@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<% if flash[:notice] %>
+  		<p class="welcome"><%= "You have submitted #{session[:count]} forms" %> </p>
+	<% end %>
+
+
+	<% if session[:new_user] %>
+ 		Name:<p><%= session[:new_user]['name'] %></p>
+ 		Location:<p><%= session[:new_user]['location'] %></p>
+ 		Language:<p><%= session[:new_user]['language'] %></p>
+ 		Comment:<p><%= session[:new_user]['comment'] %></p>
+	<% end %>
+</body>
+</html>

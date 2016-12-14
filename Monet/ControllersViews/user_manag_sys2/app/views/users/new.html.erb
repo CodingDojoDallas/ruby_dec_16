@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>New User</h2>
+
+	<%= form_for @user do |new_user| %>
+		<%= new_user.label :first_name %>
+		<%= new_user.text_field :first_name %>
+		<%= new_user.label :last_name %>
+		<%= new_user.text_field :last_name %>
+		<%= new_user.label :email_address %>
+		<%= new_user.text_field :email_address %>
+		<%= new_user.label :password %>
+		<%= new_user.text_field :password %>
+		<%= new_user.submit "Create" %>
+	<% end %>
+
+	<p><%= flash[:error] %></p>
+
+	<a href="/users">Back</a>
+
+</body>
+</html>

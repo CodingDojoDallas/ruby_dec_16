@@ -1,0 +1,36 @@
+<div class="row">
+	<form action="/users/<%= @user.id %>" method="post">
+		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+		<input type="hidden" name="_method" value="patch">
+		<div>
+			<label>First Name</label>
+			<input type="text" name="user[first_name]" value="<%=@user.first_name%>">
+		</div>
+		<div>
+			<label>Last Name</label>
+			<input type="text" name="user[last_name]" value="<%=@user.last_name%>">
+		</div>
+		<div>
+			<label>Email</label>
+			<input type="text" name="user[email]" value="<%=@user.email%>">
+		</div>
+		<div>
+			<label>City</label>
+			<input type="text" name="user[city]" value="<%=@user.city%>">
+		</div>
+		<div>
+			<select name="user[state]">
+				<% get_states.each do |state| %>
+					<% if @user.state == state %>
+						<option selected value="<%=state.id%>"><%=state.name%></option>
+					<% else %>
+						<option value="<%=state.id%>"><%=state.name%></option>
+					<% end %>
+				<% end %>
+			</select>
+		</div>
+		<div>
+			<input type="submit" value="Update">
+		</div>
+	</form>
+</div>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action='/users/create' method='post'> 
+
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		First name:<input type='text' name='user[first_name]'>
+		Last name:<input type='text' name='user[last_name]'>
+		Email: <input type='text' name='user[email]'>
+		Password:<input type='password' name='user[password]'>
+		<input type='submit' value='Create new user'>
+	</form>
+</body>
+</html>

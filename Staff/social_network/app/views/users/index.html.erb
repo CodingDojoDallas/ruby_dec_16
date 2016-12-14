@@ -1,0 +1,22 @@
+<div class="row">
+	logged_in as <%=session[:user_id] %>
+	<a href="/users/<%=session[:user_id]%>">Profile</a>&nbsp;
+	<a href="/sessions/<%=session[:user_id]%>" data-method="delete">Logout</a>
+</div>
+<div class="row">
+	<h2>Users you may want to connect with</h2>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Actions</th>
+		</tr>
+		<% @not_friends.each do |user| %>
+			<tr>
+				<td><%=user.first_name%> <%=user.last_name%></td>
+				<td>
+					<a href="/networks/<%=user.id%>" data-method="post">Connect</a>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>
