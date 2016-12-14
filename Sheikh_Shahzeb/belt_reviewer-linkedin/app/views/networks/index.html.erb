@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Dashboard page</title>
+</head>
+<body>
+	<h1>Welcome <%=@user.first_name%></h1>
+	<div class='description'>
+		<h3>here is your profile description</h3>
+		<p><%=@user.description%></p>
+	</div>
+	<div class="scroll">
+		<h3>Your Professional Network</h3>
+		<!-- scrolly bar here -->
+		<textarea width="400" height="400" scrolling="yes">
+		<!-- contact names here -->
+		</textarea> 
+	</div>
+	<div id="navbar">
+		<a href="sessions/<%=@user.id%>" data-method="delete">Logout</a>
+		<a href="/users">All Users</a>
+
+	</div>
+	<div>
+		<h3>Invitation</h3>
+		<p>The following people asked you to be in their network:</p>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Action</th>
+			</tr>
+			
+
+		</table>
+</body>
+</html>
