@@ -1,0 +1,29 @@
+<div class="row">
+	
+</div>
+<div class="row">
+	<h2>My professional network</h2>
+	<ul>
+		<% @friends.each do |network| %>
+			<li><%=network.friend.first_name%> <%=network.friend.last_name%></li>
+		<% end %>
+	</ul>
+</div>
+<div class="row">
+	<h2>Pending Invitations</h2>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>Action</td>
+		</tr>
+		<% @invites.each do |network| %>
+			<tr>
+				<td><%=network.user.first_name%> <%=network.user.last_name%></td>
+				<td>
+					<a href="/networks/<%= network.id %>" data-method="patch">Accept</a>
+					<a href="/networks/<%= network.id %>" data-method="delete">Ignore</a>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>
