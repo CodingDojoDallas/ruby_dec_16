@@ -100,4 +100,26 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+def create_user name='kobe', email='kobe@lakers.com', password='password', password_confirmation='password'
+    User.create(name: name, email: email, password: password, password_confirmation: password_confirmation)
+end
+
+def login_user user, password='password'
+    visit '/sessions/new'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_button 'Log In'
+end
+
+RSpec.configure do |config|
+    config.expect_with :rspec do |expectations|
+        expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+    end
+    config.mock_with :rspec do |mocks|
+        mocks.verify_partial_doubles = true
+end
+
+end
+
 end
