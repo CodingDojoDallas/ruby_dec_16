@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    //pg. 131
+    function interleave(arr1, arr2){
+      var res = [], max, min
+      if(arr1.length > arr2.length){
+        max = arr1
+        min = arr2
+      } else {
+        max = arr2
+        min = arr1
+      }
+      for(var i = 0; i < max.length; i++){
+        if(i < min.length){
+          res.push(arr1[i], arr2[i])
+        } else {
+          res.push(max[i])
+        }
+      }
+      return res
+    }
+
+    console.log(interleave([77,22,11,22], [2, 6, 7, 2, 6, 2])) //returns [77, 2, 22, 6, 11, 7, 22, 2, 6, 2]
+
+    function sortedArrays(arr1, arr2){
+      var res = [], short, long
+      if(arr1.length > arr2.length){
+        long = arr1
+        short = arr2
+      } else {
+        long = arr2
+        short = arr1
+      }
+      for(var i = 0; i < short.length; i++){
+        var x = 0
+        while(x < long.length){
+          if(short[i] == long[x]){
+            res.push(short[i])
+            long.splice(x, 1)
+            break
+          }
+          x++
+        }
+      }
+      return res
+    }
+    console.log(sortedArrays([1,2,2,2,7,8], [2,2,6,6,7])) //returned [2, 2, 7]
+
+
+  });
+
+
+  $(function(){
+    // or here, pick one.
+  });
+  </script>
+</head>
+<body>
+
+</body>
+</html>
