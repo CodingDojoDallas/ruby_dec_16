@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Shoes Page</title>
+</head>
+<body>
+	<div>
+		<h3>Hi <%=@user.first_name%></h3>
+	</div>
+	<div>
+		<h2>All Products</h2>
+	</div>
+	<div>
+		<a href="/dashboard" data-method="get">Go To Dashboard</a>
+		<a href="/sessions/<%=@user.id%>" data-method="delete">Logout</a>
+	</div>
+	
+	<div>
+		<table border="1">
+			<tr>
+				<th>Product</th>
+				<th>Seller</th>
+				<th>Date Posted</th>
+				<th>Ammount</th>
+				<th>Action</th>
+			</tr>
+			<%@shoes.each do |shoe| %>
+			<tr>
+				<td><%=shoe.name%></td>
+				<td><%=shoe.seller.first_name%></td>
+				<td><%=shoe.created_at%></td>
+				<td><%=shoe.ammount%></td>
+				<td><a href="/shoes/<%=shoe.id%>" data-method="patch">Buy</a></td>
+			</tr>
+			<%end%>
+		</table>
+	</div>
+</body>
+</html>
