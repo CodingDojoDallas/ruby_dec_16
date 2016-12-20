@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Users Page</title>
+</head>
+<body>
+	<h3> Users <%=@user.name%> might want to connect with</h3>
+	<a href="/sessions/<%=@user.id%>" data-method="delete">Log Out</a>
+	<div>
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Action</th>
+			</tr>
+			<%@network.each do |user| %>
+			<tr>
+				<td><%=user.name%></td>	
+				<td><a href="/networks/<%=user.id%>" data-method="post">Connect</a></td>
+						<!--build out Connect link-->
+			<%end%>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
