@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<div>
+		<h1>Hello <%=@user.first_name%></h1>
+	</div>
+	<div>
+		<a href="/shoes" data-method="get">Go To All Products</a>
+	<div>
+		<h3>Sell Product</h3>
+		<form action="/shoes" method="post">
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+			<label>Name</label>
+				<input type="name" name="product[name]">
+			<label>Ammount
+				<input type="number" name="product[ammount]">
+			<input type="submit" value="Sell">
+		</form>
+		<div>
+			<%if flash[:success] %>
+				<%flash[:success].each do |message|%>
+					<p><%=message%></p>	
+				<%end%>
+			<%end%>
+		</div>
+		<div>
+			<%if flash[:shoe_errors] %>
+				<%flash[:shoe_errors].each do |message|%>
+					<p><%=message%></p>	
+				<%end%>
+			<%end%>
+		</div>
+	<div>
+		<table border="1">
+			<h3>Your products that are not sold yet</h3>
+			<tr>
+				<th>Product</th>
+				<th>Date Posted</th>
+				<th>Ammount</th>
+				<th>Action</th>
+			</tr>
+			<% @not_sold.each do |shoe| %>	
+			<tr>
+				<td><%=shoe.name%></td>
+				<td><%=shoe.created_at%></td>
+				<td><%=shoe.ammount%></td>
+				<td><a href="/shoes/<%=shoe.id%>" data-method="delete">remove</a>
+				<!-- still need to build out this link -->
+			</td>
+			<% end %>
+		</table>
+
+		<table border="1">
+			<h3>Your recent sales</h3>
+			<tr>
+				<th>Product</th>
+				<th>Date Bought</th>
+				<th>Seller</th>
+				<th>Ammount</th>
+			</tr>
+			<%@my_sales.each do |shoe| %>
+			<tr>
+				<td><%=shoe.name%></td>
+				<td><%=shoe.created_at%></td>
+				<td><%=shoe.buyer.first_name%></td>
+				<td><%=shoe.ammount%></td>
+			</tr>
+			<%end%>
+		</table>
+
+
+		<table  border="1">
+			<h3>Your recent purchases</h3>
+			<tr>
+				<th>Product</th>
+				<th>Date Posted</th>
+				<th>Ammount</th>
+				<th>Seller</th>
+			</tr>
+			<%@my_purchases.each do |shoe| %>
+			<tr>
+				<td><%=shoe.name%></td>
+				<td><%=shoe.created_at%></td>
+				<td><%=shoe.ammount%></td>
+				<td><%=shoe.seller.first_name%></td>
+			</tr>
+			<%end%>
+		</table>
+
+
+
+</body>
+</html>

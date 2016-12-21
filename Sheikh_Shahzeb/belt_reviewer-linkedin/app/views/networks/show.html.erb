@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Users</title>
+</head>
+<body>
+	<h3>Users you may want to connect with</h3>
+		<div>
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Action</th>
+				</tr> 
+				<% @users.each do |user| %>
+				<tr>
+					<td><a href="users/<%=user.id%>"><%user.first_name%> <%user.last_name%></a></td>
+					<td>
+				<% end %>
+			</table>
+</body>
+</html>

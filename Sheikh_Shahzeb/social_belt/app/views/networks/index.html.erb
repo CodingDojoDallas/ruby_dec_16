@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Hi <%=@user.name.capitalize%></h3>
+	<div>
+		<a href='/users'>Users List</a>
+		<a href="/sessions/<%=@user.id%>" data-method="delete">Log Out</a>
+	<div>
+		<h3>Here is your profile Description</h3>
+		<p><%=@user.description%></p>
+	</div>
+	<table border ='1'>
+		<tr>
+			<th>Name</th>
+			<th>Action</th>
+		</tr>
+		<%@network.each do |network|%>
+		<tr>
+			<td><%=network.user.name%></td>
+			<td>
+				<a href="/networks/<%=network.id%>" data-method="patch">Accept</a>
+				<a href="/networks/<%=network.id%>" data-method="delete">Remove</a>
+			</td>
+		</tr>
+		<%end%>
+	</table>
+	<div>
+	<h3>Users that <%=@user.name.capitalize%> has connected with</h3>
+	<table border ='1'>
+		<tr>
+			<th>Name</th>
+		</tr>
+		<%@y_network.each do |network|%>
+		<tr>
+			<td><%=network.user.name%></td>
+		</tr>			
+		<%end%>
+	</table>
+
+</body>
+</html>

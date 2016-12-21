@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sold: false
+  user_id: one
+  seller_id: one
+  buyer_id: one
+  name: MyString
+  ammount: 1.5
+  date: MyString
+
+two:
+  sold: false
+  user_id: two
+  seller_id: two
+  buyer_id: two
+  name: MyString
+  ammount: 1.5
+  date: MyString
