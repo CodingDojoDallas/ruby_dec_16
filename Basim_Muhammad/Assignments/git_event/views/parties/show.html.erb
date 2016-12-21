@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> <%= @party.name %> </h1>
+
+	<h2> Host: <%= @party.user.first_name %></h2>
+
+	<h2> Date: <%= @party.date %></h2>
+
+	<h2> Location: <%= @party.city %>,<%= @party.state %> </h2>
+
+	<h2> Number of Attendees: <%= @count %></h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>City</th>
+				<th>State</th>
+			</tr>
+		</thead>
+
+		<tbody>
+		<% @party.attendees.each do |attendee| %>
+			<tr>
+				<td><%= attendee.user.first_name %> <%= attendee.user.last_name %></td>
+				<td><%= attendee.user.city %></td>
+				<td><%= attendee.user.state %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+
+
+
+
+
+
+
+</body>
+</html>

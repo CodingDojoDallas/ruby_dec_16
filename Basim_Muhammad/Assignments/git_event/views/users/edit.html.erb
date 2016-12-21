@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Page</title>
+</head>
+<body>
+	<h2>Edit Profile</h2>
+	<form action='/users/<%=@user.id%>' method='post'>
+	<input type="hidden" name="_method" value="patch">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	First_name:<input type='text' name='user[first_name]' placeholder='<%=@user.first_name %>'>
+	Last Name: <input type='text' name='user[last_name]' placeholder='<%=@user.last_name %>'>
+	Email:<input type='text' name='user[email]' placeholder='<%=@user.email %>'>
+	City:<input type='text' name='user[city]' placeholder='<%=@user.city %>'>
+	State:<input type='text' name='user[state]' placeholder='<%=@user.state %>'>
+	<input type='submit' value='Edit'>
+		
+	</form>
+
+	<% if flash[:errors] %>
+		<%= flash[:errors] %>
+	<% end %>
+</body>
+</html>

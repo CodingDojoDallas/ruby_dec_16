@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Register</h2>
+	<form action='/users' method='post'>
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	First_name:<input type='text' name='user[first_name]'>
+	Last Name: <input type='text' name='user[last_name]'>
+	Email:<input type='text' name='user[email]'>
+	City:<input type='text' name='user[city]'>
+	State:<input type='text' name='user[state]'>
+	Password:<input type='password' name='user[password]'>
+	Password Confirmation:<input type='password' name='user[password_confirmation]'>
+	<input type='submit' value='register'>
+		
+	</form>
+
+	<% if flash[:errors] %>
+		<%= flash[:errors] %>
+	<% end %>
+
+	<h2>Login</h2>
+	<form action='/users/register' method='post'>
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		Email: <input type='text' name='user[email]'>
+		Password<input type='password' name='user[password]'>
+		<input type='submit' value='Login'>
+	</form>
+
+
+</body>
+</html>

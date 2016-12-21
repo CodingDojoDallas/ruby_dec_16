@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<%= button_to "Logout", user_path(@user), method: :delete %>
+	<%= button_to "Edit My Profile", edit_user_path(@user), method: :get %>
+
+	<h4>Welcome <%= @user.first_name %> </h2>
+	<h2>Here are some events from your state</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Date</th>
+				<th>City</th>
+				<th>Host</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @local_parties.each do |party| %>
+				<tr>
+					<td><a href="/parties/<%=party.id%>"><%=party.name%></a></td>
+					<td><%= party.date %></td>
+					<td><%= party.city %></td>
+					<td><%= party.user.first_name %></td>
+					<% @party_attendees=party.attendees %>
+					<% if party.user==@user %>
+						<td><%= button_to 'Delete', party_path(party), :method => :delete%></td>
+					<% elsif @party_attendees.any? {|attendee| attendee.user==@user}  %>
+						<td><%= button_to 'Cancel', attendee_path(party), :method => :delete%></td>
+					<% else  %>
+						<td><%= link_to 'Join', attendee_path(party), :method => :put%></td>
+					<% end %>
+				
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<h2>Here are some events from other states</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Date</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Host</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @outside_parties.each do |party| %>
+				<tr>
+					<td><a href="/parties/<%=party.id%>"><%=party.name%></a></td>
+					<td><%= party.date %></td>
+					<td><%= party.city %></td>
+					<td><%= party.state %></td>
+					<td><%= party.user.first_name %></td>
+					<% @party_attendees=party.attendees %>
+					<% if @party_attendees.any? {|attendee| attendee.user==@user}  %>
+						<td><%= button_to 'Cancel', attendee_path(party), :method => :delete%></td>
+					<% else  %>
+						<td><%= link_to 'Join', attendee_path(party), :method => :put%></td>
+					<% end %>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<h1>Add Party</h1>
+	<form action='/parties' method='post'>
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type='hidden' name='party[user_id]' value='<%= @user.id %>'>
+	Name:<input type='text' name='party[name]'>
+	Date:<input type='date' name='party[date]'>
+	City:<input type='text' name='party[city]'>
+	State:<input type='text' name='party[state]'>
+	<input type='submit' value='Create a Party'>
+
+	</form>
+
+</body>
+</html>

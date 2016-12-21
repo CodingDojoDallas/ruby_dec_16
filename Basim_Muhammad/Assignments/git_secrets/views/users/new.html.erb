@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action='/users' method='post'>
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		Name:<input type='text' name='user[name]' >
+		Email:<input type='text' name='user[email]'>
+		Password:<input type='password' name='user[password]'>
+		Confirm Password:<input type='password' name='user[password_confirmation]'>
+		<input type='submit' value='Register'>
+	</form>
+
+	<div>
+		<% if flash[:errors] %>
+			<% flash[:errors].each do |error| %>
+				<%= error %>
+			<% end %>
+		<% end %>
+	</div>
+</body>
+</html>
